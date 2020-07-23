@@ -29,3 +29,6 @@ alias usbunmount="udisksctl unmount -b /dev/sdc1"
 # mount phone mtp
 alias mtpmount="jmtpfs ~/.mtp"
 alias mtpunmount="fusermount -u ~/.mtp"
+
+# click on point to get RGB value
+alias getrgb="maim -st 0 | convert - -resize 1x1\! -format '%[pixel:p{0,0}]' info:-"
