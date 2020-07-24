@@ -168,6 +168,11 @@ XF86AudioNext
 XF86AudioPrev
 	mpc prev
 
+XF86MonBrightnessUp
+	fish ~/.scripts/brightness_control/./brightness_up.sh 0.1
+XF86MonBrightnessDown
+	fish ~/.scripts/brightness_control/./brightness_down.sh 0.1
+
 #
 # screen capture using maim
 #
