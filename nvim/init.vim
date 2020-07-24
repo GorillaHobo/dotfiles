@@ -7,8 +7,12 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 
-let mapleader=" "
+syntax on
 set number! relativenumber!
+set autoindent
+
+let mapleader=" "
+
 imap jj <Esc>
 imap <C-f> <Esc>la
 imap <C-b> <Esc>ha

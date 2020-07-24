@@ -3,6 +3,10 @@
 # Launch neovim
 alias v="nvim"
 
+# fish change modes
+alias vf="fish_vi_key_bindings"
+alias nf="fish_default_key_bindings"
+
 # Neovim configuration
 alias vfish="nvim ~/.config/fish/config.fish"
 alias vbsp="nvim ~/.config/bspwm/bspwmrc"
