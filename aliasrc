@@ -8,11 +8,13 @@ alias vf="fish_vi_key_bindings"
 alias nf="fish_default_key_bindings"
 
 # Neovim configuration
+alias vz="nvim ~/.zshrc"
 alias vfish="nvim ~/.config/fish/config.fish"
 alias vbsp="nvim ~/.config/bspwm/bspwmrc"
 alias vsx="nvim ~/.config/sxhkd/sxhkdrc"
 alias vala="nvim ~/.config/alacritty/alacritty.yml"
 alias vvim="nvim ~/.config/nvim/init.vim"
+alias valias="nvim ~/.config/aliasrc"
 
 # nnn aliases 
 alias n="nnn"

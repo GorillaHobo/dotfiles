@@ -155,8 +155,6 @@ XF86AudioRaiseVolume
 	amixer set Master 10%+
 XF86AudioLowerVolume
 	amixer set Master 10%-
-ctrl + o
-	amixer set Master unmute
 
 # mpc music control
 XF86AudioStop
@@ -184,8 +182,3 @@ Print
 # select a portion of the screen. save it, and put in xclip clipboard
 ctrl + Shift + Print
 	maim -s | xclip -selection clipboard -t image/png
-
-# point and click screen to get rgb value
-shift + Print
-	maim -i (xdotool getactivewindow) ~/Storage/Pictures/Screenshots/(date +%s).png
-

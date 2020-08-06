@@ -20,19 +20,14 @@ bspc config single_monocle     	 true
 bspc rule -a Brave-browser desktop='^2' focus=on follow=on
 bspc rule -a firefox focus=on follow=on
 bspc rule -a Emacs focus=on state=tiled follow=on
+bspc rule -a Zathura state=tiled 
 
 # set background image
-#feh --bg-fill ~/Storage/Downloads/Wallpapers/wallpaper4.png
-feh --bg-fill ~/Storage/Masters/Rice/Polybar/polybar-themes/polybar-12/wallpapers/bg_1.jpg
+feh --bg-fill --randomize ~/Storage/Downloads/Wallpapers/
+# feh --bg-fill ~/Storage/Masters/Rice/Polybar/polybar-themes/polybar-12/wallpapers/bg_1.jpg
 
 # start polybar
 sh .config/polybar/launch.sh
 
 # start picom
 picom &
-
-# run xrandr command if an external monitor is connected
-# if [ -x $HOME/.config/bspwm/dualmonitor ];
-# then
-# 	dualmonitor
-# fi
