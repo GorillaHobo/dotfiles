@@ -177,8 +177,8 @@ XF86MonBrightnessDown
 
 # take screenshot at ~/Storage/Pictures/Screenshots/
 Print
-	maim ~/Storage/Pictures/Screenshots/(date +%s).png
+	maim ~/Storage/Pictures/Screenshots/(date +%s).png 
 
-# select a portion of the screen. save it, and put in xclip clipboard
+# select a portion of the screen. save it, and puts in xclip clipboard
 ctrl + Shift + Print
 	maim -s | xclip -selection clipboard -t image/png

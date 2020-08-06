@@ -4,30 +4,47 @@
 alias v="nvim"
 
 # fish change modes
-alias vf="fish_vi_key_bindings"
-alias nf="fish_default_key_bindings"
+# alias \
+# 	vf="fish_vi_key_bindings" \
+# 	nf="fish_default_key_bindings" \
 
 # Neovim configuration
-alias vz="nvim ~/.zshrc"
-alias vfish="nvim ~/.config/fish/config.fish"
-alias vbsp="nvim ~/.config/bspwm/bspwmrc"
-alias vsx="nvim ~/.config/sxhkd/sxhkdrc"
-alias vala="nvim ~/.config/alacritty/alacritty.yml"
-alias vvim="nvim ~/.config/nvim/init.vim"
-alias valias="nvim ~/.config/aliasrc"
+alias \
+	vz="nvim ~/.config/zsh/.zshrc" \
+	vfish="nvim ~/.config/fish/config.fish" \
+	vbsp="nvim ~/.config/bspwm/bspwmrc" \
+	vsx="nvim ~/.config/sxhkd/sxhkdrc" \
+	vala="nvim ~/.config/alacritty/alacritty.yml" \
+	vvim="nvim ~/.config/nvim/init.vim" \
+	valias="nvim ~/.config/aliasrc" \
+	vlf="nvim ~/.config/lf/lfrc" \
 
 # nnn aliases 
-alias n="nnn"
-alias ndown="nnn ~/Storage/Downloads/"
-alias nconf="nnn ~/.config/"
-alias ns="nnn ~/Storage/"
-alias ntor="nnn ~/Storage/Downloads/Torrents/"
-alias nd="nnn ~/Documents/"
-alias ndocs="nnn ~/Storage/Documents/"
-alias yamaha="nnn ~/Storage/Documents/Yamaha/"
-alias nex="nnn /run/media/tony/"
-alias npoly="nnn ~/.config/polybar/"
-alias nmtp="nnn ~/.mtp/"
+alias \
+	n="nnn" \
+	ndown="nnn ~/Storage/Downloads/" \
+	nc="nnn ~/.config/" \
+	ns="nnn ~/Storage/" \
+	ntor="nnn ~/Storage/Downloads/Torrents/" \
+	nd="nnn ~/Documents/" \
+	ndocs="nnn ~/Storage/Documents/" \
+	nex="nnn /run/media/tony/" \
+	npoly="nnn ~/.config/polybar/" \
+	nmtp="nnn ~/.mtp/" \
+
+# lf aliases 
+alias \
+	lf="lf" \
+	lfdown="lf ~/Storage/Downloads/" \
+	lfc="lf ~/.config/" \
+	lfs="lf ~/Storage/" \
+	lftor="lf ~/Storage/Downloads/Torrents/" \
+	lfd="lf ~/Documents/" \
+	lfdocs="lf ~/Storage/Documents/" \
+	yamaha="lf ~/Storage/Documents/Yamaha/" \
+	lfex="lf /run/media/tony/" \
+	lfpoly="lf ~/.config/polybar/" \
+	lfmtp="lf ~/.mtp/" \
 
 # emacs aliases
 alias personal="emacs ~/Storage/Documents/personal/todos.org"
@@ -48,3 +65,23 @@ alias factorio="sh ~/Storage/Games/Factorio/Factorio/run.sh"
 
 # change random wallpaper
 alias wallpaper="feh --bg-fill --randomize ~/Storage/Downloads/Wallpapers/"
+
+# Colorize commands if possible
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	la="ls -ahN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+
+# verbose commands
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# sxiv open all in directory
+alias \
+	sxiv="~/.scripts/rifle-sxiv.sh"

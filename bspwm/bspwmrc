@@ -6,7 +6,7 @@ sxhkd &
 bspc monitor LVDS-1 -d 1 2 3 4 5 
 bspc monitor VGA-1 -d 6 7 8 9 0
 
-bspc config focused_border_color "#D5C4A1"
+bspc config focused_border_color "#d79921"
 
 bspc config border_width         3
 bspc config window_gap           10
