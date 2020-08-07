@@ -17,67 +17,62 @@ $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
 cmd open ${{
     case $(file --mime-type $f -b) in
 		image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
-		text/*) $EDITOR $fx;;
+		text/*) $EDITOR $fx ;;
 		image/x-xcf|image/svg+xml) setsid -f gimp $f >/dev/null 2>&1 ;;
-		image/*) $HOME/.scripts/rifle-sxiv.sh $fx;;
+		image/*) rifle-sxiv.sh $fx;;
 		audio/*) mpv --audio-display=no $f ;;
 		video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
-		application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+		application/pdf|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+		application/vnd*) setsid -f libreoffice --nologo $fx ;;
 		*) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
 	esac
 }}
 
-cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
-
-# cmd delete ${{
-# 	clear; tput cup $(($(tput lines)/3)); tput bold
-# 	set -f
-# 	printf "%s\n\t" "$fx"
-# 	printf "delete?[y/N]"
-# 	read ans
-# 	[ $ans = "y" ] && rm -rf $fx
-# }}
-
-cmd moveto ${{
-	clear; tput cup $(($(tput lines)/3)); tput bold
-	set -f
-	clear; echo "Move to where?"
-	dest="$(cut -d'	' -f2- ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf | sed 's|~|$HOME|' )" &&
-	for x in $fx; do
-		eval mv -iv \"$x\" \"$dest\"
-	done &&
-	notify-send "🚚 File(s) moved." "File(s) moved to $dest."
-}}
-
-cmd copyto ${{
-	clear; tput cup $(($(tput lines)/3)); tput bold
-	set -f
-	clear; echo "Copy to where?"
-	dest="$(cut -d'	' -f2- ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf | sed 's|~|$HOME|' )" &&
-	for x in $fx; do
-		eval cp -ivr \"$x\" \"$dest\"
-	done &&
-	notify-send "📋 File(s) copied." "File(s) copies to $dest."
-}}
+# create new folder & file
+cmd md %echo "Directory name: " && read ans && mkdir -p $ans
+cmd mf %echo "File name: " && read ans && touch $ans
 
 cmd setbg "$1"
 cmd bulkrename $vidir
 
+# go to home
+map ~ "cd ~/"
+
+cmd create %{{
+	echo "Press \"f\" for file or \"d\" for directory: "
+	read -k1 ans
+	case $ans in
+		 "d")
+			echo "Directory Name(s): " && read -A ans && ans=("${(s: :)ans}")
+			for i in $ans[@] ; do mkdir -p $i ; done ;;
+		 "f")
+			echo "File name(s): " && read -A ans && ans=("${(s: :)ans}")
+			for i in $ans[@]; do touch $i ; done ;;
+		 *)
+			echo "Cancelled" ;;
+	esac
+}}
+
+
+
 # Bindings
 map <c-f> $lf -remote "send $id select '$(fzf)'"
-map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf)"
+# map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf)"
 map gh
 map g top
 map D delete
-map C copyto
-map M moveto
-map <c-n> push :mkdir<space>
+# map C copyto
+# map M moveto
+map <c-n> push :md<space>
+map <s-n> push :mf<space>
 map <c-r> reload
 map <enter> shell
 map x $$f
 map X !$f
 map o &mimeopen $f
 map O $mimeopen --ask $f
+
+map <c-n> create
 
 map A rename # at the very end
 map c push A<c-u> # new rename
