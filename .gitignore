@@ -4,4 +4,16 @@ dconf/
 inkscape/
 libreoffice/
 gnupg/
-
+QtProject.conf
+gqrx/
+karboncalligraphyrc
+kritadisplayrc
+kritarc
+lf/lfrc_
+nvim/plugged/auto-pairs/
+nvim/plugged/omnisharp-vim/
+nvim/plugged/vim-easymotion/
+pavucontrol.ini
+pulse/
+qutebrowser/
+vifm/

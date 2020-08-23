@@ -49,7 +49,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  #decorations: full
+  # decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -97,7 +97,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: IBM Plex Mono
+    family: Cascadia Code
     style: Regular
 
     # The `style` can be specified to pick a specific face.
@@ -109,7 +109,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: IBM Plex Mono
+    family: Cascadia Code
     style: Bold
 
   # Italic font face
@@ -118,7 +118,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: IBM Plex Mono
+    family: Cascadia Code 
     style: Italic
 
   # Bold italic font face
@@ -127,8 +127,8 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: IBM Plex Mono
-    style: Bold Italic
+    family: Cascadia Code 
+    style: bold Italic
 
   # Point size
   size: 8.5
@@ -304,7 +304,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-# background_opacity: 0.5
+background_opacity: 0.9
 
 # selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

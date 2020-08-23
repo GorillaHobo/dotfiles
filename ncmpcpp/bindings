@@ -10,16 +10,16 @@
 #def_key "up"
 #  scroll_up
 #
-#def_key "shift-up"
-#  select_item
-#  scroll_up
+def_key "K"
+ select_item
+ scroll_up
 #
 #def_key "down"
 #  scroll_down
 #
-#def_key "shift-down"
-#  select_item
-#  scroll_down
+def_key "J"
+ select_item
+ scroll_down
 #
 #def_key "["
 #  scroll_up_album
@@ -60,16 +60,15 @@
 #def_key "enter"
 #  play_item
 #
-#def_key "space"
-#  add_item_to_playlist
+def_key "space"
+ add_item_to_playlist
 #
-#def_key "space"
+# def_key "space"
 #  toggle_lyrics_update_on_song_change
 #
-#def_key "space"
-#  toggle_visualization_type
-#
-#def_key "delete"
+def_key "space"
+ toggle_visualization_type
+# def_key "delete"
 #  delete_playlist_items
 #
 #def_key "delete"
@@ -177,8 +176,8 @@
 #def_key "backspace"
 #  replay_song
 #
-#def_key "f"
-#  seek_forward
+def_key "f"
+ seek_forward
 #
 #def_key "b"
 #  seek_backward
@@ -324,14 +323,14 @@
 #def_key "m"
 #  move_sort_orde_up
 #
-#def_key "m"
-#  move_selected_items_up
+def_key "ctrl-k"
+ move_selected_items_up
 #
 #def_key "n"
 #  move_sort_order_down
 #
-#def_key "n"
-#  move_selected_items_down
+def_key "ctrl-j"
+ move_selected_items_down
 #
 #def_key "M"
 #  move_selected_items_to
@@ -438,10 +437,10 @@ def_key "N"
     previous_found_item
 
 # not used but bound
-def_key "J"
-    move_sort_order_down
+# def_key "J"
+  move_sort_order_down
 def_key "K"
-    move_sort_order_up
+  move_sort_order_up
 def_key "h"
   jump_to_parent_directory
 def_key "l"
@@ -469,10 +468,10 @@ def_key "s"
   reset_search_engine
 def_key "s"
   show_search_engine
-def_key "f"
-  show_browser
-def_key "f"
-  change_browse_mode
+# def_key "f"
+#   show_browser
+# def_key "f"
+#   change_browse_mode
 def_key "x"
   delete_playlist_items
 def_key "P"

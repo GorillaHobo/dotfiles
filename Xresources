@@ -1,8 +1,8 @@
 !! Transparency (0-1):
-/* *.alpha: 0.8 */
+*.alpha: 0.9
 
 !! Set a default font and font size as below:
-/* *.font: monospace:size=10 */
+*.font: Fira Code:size=10
 
 /* name		dark	light */
 /* black	0	8 */
@@ -13,10 +13,10 @@
 /* purple	5	13 */
 /* cyan		6	14 */
 /* white	7	15 */
-*.background: #111111
-*.foreground: #d79921
+/* *.background: #282828 */
+/* *.foreground: #d79921 */
 
-/* !! gruvbox: */
+!! gruvbox:
 *.color0: #1d2021
 *.color1: #cc241d
 *.color2: #98971a
@@ -35,6 +35,8 @@
 *.color15: #ebdbb2
 *.color256: #1d2021
 *.color257: #ebdbb2
+*.background: #282828
+*.foreground: #d79921
 
 /* !! gruvbox light: */
 /* *.color0: #fbf1c7 */

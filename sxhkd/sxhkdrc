@@ -4,19 +4,27 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	termite
 
 # program launcher
 super + @space
-	dmenu_run
+	dmenu_run -b -fn 'Fira Code-13' -nb '#282828' -sb '#D79921' -nf '#A89984' -sf '#282828'
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd && notify-send "Sxhkd reloaded."
 
 #
 # bspwm hotkeys
 #
+
+# launch HTOP
+ctrl + alt + Delete
+	termite -e htop
+
+# launch sxiv at wallpaper directory
+super + F8
+	  wallpaper
 
 # quit/restart bspwm
 super + alt + {q,r}
@@ -119,8 +127,10 @@ super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
-super + {Left,Down,Up,Right}
+super + ctrl + alt + {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+# super + {Left,Down,Up,Right}
+# 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # make fish shell to play nice with bspwm
 set -U SXHKD_SHELL /usr/bin/bash
@@ -137,6 +147,10 @@ super + F3
 super + F2
 	brave
 
+# vivaldi
+super + F1
+	vivaldi-stable
+
 # emacs
 super + shift + d
 	emacs
@@ -144,17 +158,28 @@ super + shift + d
 # music ncmpcpp
 super + F10
 	mpd ; \
-	alacritty -e ncmpcpp
+	termite -e ncmpcpp
+super + shift + F10
+	killall -q mpd && killall -q ncmpcpp
 
+super + F9
+	mopidy & ; \
+	termite -e ncmpcpp
+super + shift + F9
+	killall -q mopidy && killall -q ncmpcpp
 #
 # fn keys
 #
 
 # Alsa Master Volume control
-XF86AudioRaiseVolume
-	amixer set Master 10%+
-XF86AudioLowerVolume
-	amixer set Master 10%-
+super + greater
+	amixer set Master 5%+
+super + less
+ 	amixer set Master 5%-
+# XF86AudioRaiseVolume
+# 	amixer set Master 10%+
+# XF86AudioLowerVolume
+# 	amixer set Master 10%-
 
 # mpc music control
 XF86AudioStop
@@ -176,9 +201,18 @@ XF86MonBrightnessDown
 #
 
 # take screenshot at ~/Storage/Pictures/Screenshots/
+# take desktop screenshot
 Print
-	maim ~/Storage/Pictures/Screenshots/(date +%s).png 
+	maim_screenshot 1
+# take Window screenshot
+shift + Print
+	maim_screenshot 2
+# take Selected screenshot
+shift + ctrl + Print
+	maim_screenshot 3
+# get rgb using maim
+shift + ctrl + alt + Print
+	get_rgb
 
-# select a portion of the screen. save it, and puts in xclip clipboard
-ctrl + Shift + Print
-	maim -s | xclip -selection clipboard -t image/png
+
+

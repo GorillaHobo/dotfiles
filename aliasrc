@@ -1,50 +1,47 @@
-# alises
+# aliases
 
 # Launch neovim
-alias v="nvim"
+alias v="kitty -e nvim "
 
-# fish change modes
-# alias \
-# 	vf="fish_vi_key_bindings" \
-# 	nf="fish_default_key_bindings" \
+alias dmenu="dmenu_run -b -fn 'Fira Code-12' -nb '#282828' -sb '#D79921' -nf '#A89984' -sf '#282828'"
+alias dmenu_run="dmenu_run -b -fn 'Fira Code-12' -nb '#282828' -sb '#D79921' -nf '#A89984' -sf '#282828'"
 
 # Neovim configuration
-alias \
-	vz="nvim ~/.config/zsh/.zshrc" \
-	vfish="nvim ~/.config/fish/config.fish" \
-	vbsp="nvim ~/.config/bspwm/bspwmrc" \
-	vsx="nvim ~/.config/sxhkd/sxhkdrc" \
-	vala="nvim ~/.config/alacritty/alacritty.yml" \
-	vvim="nvim ~/.config/nvim/init.vim" \
-	valias="nvim ~/.config/aliasrc" \
-	vlf="nvim ~/.config/lf/lfrc" \
+alias vz=" v ~/.config/zsh/.zshrc"
+alias vfish=" v ~/.config/fish/config.fish"
+alias vbsp=" v ~/.config/bspwm/bspwmrc"
+alias vsx=" v ~/.config/sxhkd/sxhkdrc"
+alias vala=" v ~/.config/alacritty/alacritty.yml"
+alias vterm=" v ~/.config/termite/config"
+alias vvim=" v ~/.config/nvim/init.vim"
+alias valias=" v ~/.config/aliasrc"
+alias vlf=" v ~/.config/lf/lfrc"
+alias vq=" v ~/.config/qutebrowser/config.py"
 
 # nnn aliases 
-alias \
-	n="nnn" \
-	ndown="nnn ~/Storage/Downloads/" \
-	nc="nnn ~/.config/" \
-	ns="nnn ~/Storage/" \
-	ntor="nnn ~/Storage/Downloads/Torrents/" \
-	nd="nnn ~/Documents/" \
-	ndocs="nnn ~/Storage/Documents/" \
-	nex="nnn /run/media/tony/" \
-	npoly="nnn ~/.config/polybar/" \
-	nmtp="nnn ~/.mtp/" \
+alias n="nnn"
+alias ndown="nnn ~/Storage/Downloads/"
+alias nc="nnn ~/.config/"
+alias ns="nnn ~/Storage/"
+alias ntor="nnn ~/Storage/Downloads/Torrents/"
+alias nd="nnn ~/Documents/"
+alias ndocs="nnn ~/Storage/Documents/"
+alias nex="nnn /run/media/tony/"
+alias npoly="nnn ~/.config/polybar/"
+alias nmtp="nnn ~/.mtp/"
 
 # lf aliases 
-alias \
-	lf="lf" \
-	lfdown="lf ~/Storage/Downloads/" \
-	lfc="lf ~/.config/" \
-	lfs="lf ~/Storage/" \
-	lftor="lf ~/Storage/Downloads/Torrents/" \
-	lfd="lf ~/Documents/" \
-	lfdocs="lf ~/Storage/Documents/" \
-	yamaha="lf ~/Storage/Documents/Yamaha/" \
-	lfex="lf /run/media/tony/" \
-	lfpoly="lf ~/.config/polybar/" \
-	lfmtp="lf ~/.mtp/" \
+alias lf="lf"
+alias lfdown="lf ~/Storage/Downloads/"
+alias lfc="lf ~/.config/"
+alias lfs="lf ~/Storage/"
+alias lftor="lf ~/Storage/Downloads/Torrents/"
+alias lfd="lf ~/Documents/"
+alias lfdocs="lf ~/Storage/Documents/"
+alias yamaha="lf ~/Storage/Documents/Yamaha/"
+alias lfx="lf /run/media/tony/"
+alias lfpoly="lf ~/.config/polybar/"
+alias lfmtp="lf ~/.mtp/"
 
 # emacs aliases
 alias personal="emacs ~/Storage/Documents/personal/todos.org"
@@ -58,30 +55,28 @@ alias mtpmount="jmtpfs ~/mtp"
 alias mtpunmount="fusermount -u ~/.mtp"
 
 # click on point to get RGB value
-alias getrgb="maim -st 0 | convert - -resize 1x1\! -format '%[pixel:p{0,0}]' info:-"
+alias getrgb="maim -st 0 | convert - -resize 1x1! -format '%[pixel:p{0,0}]' info:-"
 
 # start factorio
 alias factorio="sh ~/Storage/Games/Factorio/Factorio/run.sh"
 
 # change random wallpaper
-alias wallpaper="feh --bg-fill --randomize ~/Storage/Downloads/Wallpapers/"
+alias wallpaper="sxiv ~/Storage/Downloads/Wallpapers/*"
+alias wallpaper_random="feh --bg-fill --randomize ~/Storage/Downloads/Wallpapers/"
 
 # Colorize commands if possible
-alias \
-	ls="ls -hN --color=auto --group-directories-first" \
-	la="ls -ahN --color=auto --group-directories-first" \
-	grep="grep --color=auto" \
+alias ls="ls -hN --color=auto --group-directories-first"
+alias la="ls -ahN --color=auto --group-directories-first"
+alias grep="grep --color=auto"
 
 # verbose commands
-alias \
-	cp="cp -iv" \
-	mv="mv -iv" \
-	rm="rm -vI" \
-	mkd="mkdir -pv" \
-	yt="youtube-dl --add-metadata -i" \
-	yta="yt -x -f bestaudio/best" \
-	ffmpeg="ffmpeg -hide_banner"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -vI"
+alias mkd="mkdir -pv"
+alias yt="youtube-dl --add-metadata -i"
+alias yta="yt -x -f bestaudio/best"
+alias ffmpeg="ffmpeg -hide_banner"
 
 # sxiv open all in directory
-alias \
-	sxiv="~/.scripts/rifle-sxiv.sh"
+alias sxiv="~/.scripts/rifle-sxiv.sh"

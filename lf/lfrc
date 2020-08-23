@@ -1,6 +1,8 @@
 # Luke's lf settings
 
 # Basic vars
+set ratios "4:5"
+set info size
 set shell zsh
 set shellopts '-eu'
 set ifs "\n"
@@ -15,28 +17,24 @@ $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
 
 # cmds/functions
 cmd open ${{
-    case $(file --mime-type $f -b) in
-		image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
-		text/*) $EDITOR $fx ;;
-		image/x-xcf|image/svg+xml) setsid -f gimp $f >/dev/null 2>&1 ;;
-		image/*) rifle-sxiv.sh $fx;;
-		audio/*) mpv --audio-display=no $f ;;
-		video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
-		application/pdf|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
-		application/vnd*) setsid -f libreoffice --nologo $fx ;;
+	case $(file --mime-type $f -b) in
+		# text/*) $EDITOR $fx ;;
+		text/*) kitty -e nvim $fx  ;;
+		# image/x-xcf|image/svg+xml) sid -f gimp $f >/dev/null 2>&1 ;;
+		image/x-xcf) notify-send -u low "GIMP" "$( basename $f )" && setsid -f gimp $f >/dev/null 2>&1 ;;
+		image/svg+xml) notify-send -u low "Inkscape" "$( basename $f )" && setsid -f inkscape $f >/dev/null 2>&1 ;;
+		image/*) notify-send -u low "SXIV" "$( basename $f )" && rifle-sxiv.sh $fx ;;
+		audio/*) notify-send -u low "Now Playing" "$(basename $f)" && mpv --audio-display=no $f ;; 
+		video/*) notify-send -u low "MPV" "$( basename $f )" && setsid -f mpv $fx -quiet >/dev/null 2>&1 ;;
+		application/pdf|application/epub*) notify-send -u low "Zathura" "$(basename $f)" && setsid -f zathura $fx >/dev/null 2>&1 ;;
+		application/vnd*) notify-send -u low "Libreoffice" "$(basename $f)" && setsid -f libreoffice --nologo $fx ;;
 		*) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
 	esac
 }}
 
-# create new folder & file
-cmd md %echo "Directory name: " && read ans && mkdir -p $ans
-cmd mf %echo "File name: " && read ans && touch $ans
-
 cmd setbg "$1"
 cmd bulkrename $vidir
 
-# go to home
-map ~ "cd ~/"
 
 cmd create %{{
 	echo "Press \"f\" for file or \"d\" for directory: "
@@ -44,36 +42,64 @@ cmd create %{{
 	case $ans in
 		 "d")
 			echo "Directory Name(s): " && read -A ans && ans=("${(s: :)ans}")
-			for i in $ans[@] ; do mkdir -p $i ; done ;;
+			for i in $ans[@] ; do 
+				mkdir -p $i && notify-send "Direcory $i created."
+				done ;;
 		 "f")
 			echo "File name(s): " && read -A ans && ans=("${(s: :)ans}")
-			for i in $ans[@]; do touch $i ; done ;;
+			for i in $ans[@]; do 
+				if [ -f "$i" ]; then
+					echo "The file $i exist. Press "y" overwrite?" && read -k1 ans
+						case $ans in
+							[Yy]*) rm -rf $i && touch $i ;;
+							[Nn]*) echo "Cancelled" ;;
+						esac
+				else	
+					touch $i ; 
+					notify-send "File $i created."
+				fi
+			done ;;
 		 *)
 			echo "Cancelled" ;;
 	esac
 }}
 
+# yank path name
+cmd yank-path ${{
+    if [ -n "$fs" ]; then echo "$fs"; else echo "$f" | tr -d '\n'; fi |
+      xclip -i -selection clipboard && notify-send -c low "Directory path yanked" "$f"
+}}
 
+# Archive bindings
+cmd unarchive $ {{
+	case "$f" in
+		 *.zip) unzip "$f" ;;
+		 *.tar.gz) tar -xzvf "$f" ;;
+		 *.tar.bz2) tar -xjvf "$f" ;;
+		 *.tar) tar -xvf "$f" ;;
+		 *) notify-send -u critical "Unsupported format" ;;
+	esac
+}}
 
+#
 # Bindings
+#
+
 map <c-f> $lf -remote "send $id select '$(fzf)'"
-# map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf)"
-map gh
 map g top
 map D delete
 # map C copyto
 # map M moveto
-map <c-n> push :md<space>
-map <s-n> push :mf<space>
 map <c-r> reload
 map <enter> shell
 map x $$f
 map X !$f
 map o &mimeopen $f
 map O $mimeopen --ask $f
-
+map <c-z> unarchive
 map <c-n> create
 
+# Renaming filename
 map A rename # at the very end
 map c push A<c-u> # new rename
 map I push A<c-a> # at the very beginning
@@ -83,5 +109,10 @@ map B bulkrename
 map b $setbg $f
 
 map <c-e> down
-map <c-y> up
+map <c-a> up
 map V push :!nvim<space>
+
+map <c-s> yank-path
+
+# quick jumps
+map ga cd ~/

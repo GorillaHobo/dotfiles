@@ -7,6 +7,8 @@ bspc monitor LVDS-1 -d 1 2 3 4 5
 bspc monitor VGA-1 -d 6 7 8 9 0
 
 bspc config focused_border_color "#d79921"
+bspc config normal_border_color "#282828"
+bspc config active_border_color "#404040"
 
 bspc config border_width         3
 bspc config window_gap           10
@@ -18,19 +20,24 @@ bspc config single_monocle       true
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Brave-browser desktop='^2' focus=on follow=on
-bspc rule -a firefox focus=on follow=on
-bspc rule -a Emacs focus=on state=tiled follow=on
-bspc rule -a Zathura state=tiled 
+bspc rule -a Vivaldi-stable desktop='^2' focus=on follow=on
+bspc rule -a Emacs focus=on state=tiled 
+bspc rule -a Zathura state=tiled
+bspc rule -a Termite ncmpcpp state=floating
 
 # set background image
-feh --bg-fill --randomize ~/Storage/Downloads/Wallpapers/
-# feh --bg-fill ~/Storage/Masters/Rice/Polybar/polybar-themes/polybar-12/wallpapers/bg_1.jpg
+# feh --bg-fill --randomize ~/Storage/Downloads/Wallpapers/
+feh --bg-fill ~/.local/share/bg/*
 
 # start polybar
 sh .config/polybar/launch.sh
 
 # start picom
 picom &
+
+# start dunst
+/usr/bin/dunst &
+notify-send -c normal " ꦱ ꦩ꧀ꦱ ꦫ​ ꦑꦻ ꦫꦶ​ꦒ ꦫ ꦲ ꦂꦱ ꦪ "
 
 pgrep bspswallow || bspswallow &
 
