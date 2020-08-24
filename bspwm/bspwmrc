@@ -18,19 +18,20 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config single_monocle       true
 
+bspc config external_rules_command "./~/.config/bspwm/external_rules"
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Brave-browser desktop='^2' focus=on follow=on
 bspc rule -a Vivaldi-stable desktop='^2' focus=on follow=on
 bspc rule -a Emacs focus=on state=tiled 
 bspc rule -a Zathura state=tiled
-bspc rule -a Termite ncmpcpp state=floating
+bspc rule -a ncmpcpp desktop='^5' state=floating follow=on
 
 # set background image
 # feh --bg-fill --randomize ~/Storage/Downloads/Wallpapers/
 feh --bg-fill ~/.local/share/bg/*
 
 # start polybar
-sh .config/polybar/launch.sh
+sh /home/tony/.config/polybar/launch.sh
 
 # start picom
 picom &

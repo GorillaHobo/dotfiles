@@ -77,3 +77,5 @@ alias ffmpeg="ffmpeg -hide_banner"
 
 # sxiv open all in directory
 alias sxiv="~/.scripts/rifle-sxiv.sh"
+
+alias reloadx="xrdb ~/.config/Xresources"
