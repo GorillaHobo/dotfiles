@@ -1,22 +1,20 @@
 # aliases
 
 # Launch neovim
-alias v="kitty -e nvim "
-
-alias dmenu="dmenu_run -b -fn 'Fira Code-12' -nb '#282828' -sb '#D79921' -nf '#A89984' -sf '#282828'"
-alias dmenu_run="dmenu_run -b -fn 'Fira Code-12' -nb '#282828' -sb '#D79921' -nf '#A89984' -sf '#282828'"
+alias v="nvim"
 
 # Neovim configuration
 alias vz=" v ~/.config/zsh/.zshrc"
 alias vfish=" v ~/.config/fish/config.fish"
 alias vbsp=" v ~/.config/bspwm/bspwmrc"
-alias vsx=" v ~/.config/sxhkd/sxhkdrc"
-alias vala=" v ~/.config/alacritty/alacritty.yml"
+alias vsx= " v ~/.config/sxhkd/sxhkdrc"
+alias vala= " v ~/.config/alacritty/alacritty.yml"
 alias vterm=" v ~/.config/termite/config"
 alias vvim=" v ~/.config/nvim/init.vim"
 alias valias=" v ~/.config/aliasrc"
 alias vlf=" v ~/.config/lf/lfrc"
-alias vq=" v ~/.config/qutebrowser/config.py"
+alias vx=" v ~/.config/Xresources"
+alias vpicom=" v ~/.config/picom/picom.conf"
 
 # nnn aliases 
 alias n="nnn"
@@ -25,10 +23,9 @@ alias nc="nnn ~/.config/"
 alias ns="nnn ~/Storage/"
 alias ntor="nnn ~/Storage/Downloads/Torrents/"
 alias nd="nnn ~/Documents/"
-alias ndocs="nnn ~/Storage/Documents/"
+alias ndoc="nnn ~/Storage/Documents/"
 alias nex="nnn /run/media/tony/"
-alias npoly="nnn ~/.config/polybar/"
-alias nmtp="nnn ~/.mtp/"
+alias nmtp= "nnn ~/.mtp/"
 
 # lf aliases 
 alias lf="lf"
@@ -37,11 +34,11 @@ alias lfc="lf ~/.config/"
 alias lfs="lf ~/Storage/"
 alias lftor="lf ~/Storage/Downloads/Torrents/"
 alias lfd="lf ~/Documents/"
-alias lfdocs="lf ~/Storage/Documents/"
+alias lfdoc="lf ~/Storage/Documents/"
 alias yamaha="lf ~/Storage/Documents/Yamaha/"
 alias lfx="lf /run/media/tony/"
-alias lfpoly="lf ~/.config/polybar/"
 alias lfmtp="lf ~/.mtp/"
+alias suckless="lfcd ~/Documents/suckless/"
 
 # emacs aliases
 alias personal="emacs ~/Storage/Documents/personal/todos.org"

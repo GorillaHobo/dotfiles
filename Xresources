@@ -2,7 +2,7 @@
 *.alpha: 0.9
 
 !! Set a default font and font size as below:
-*.font: Fira Code:size=10
+*.font: Cascadia Mono:size=10
 
 /* name		dark	light */
 /* black	0	8 */
@@ -16,8 +16,13 @@
 /* *.background: #282828 */
 /* *.foreground: #d79921 */
 
+#define blk #282828
+#define dmenu_font Cascadia Mono:size=13
+dmenu.background : blk
+dmenu.font : dmenu_font
+
 !! gruvbox:
-*.color0: #1d2021
+*.color0: blk
 *.color1: #cc241d
 *.color2: #98971a
 *.color3: #d79921
@@ -33,11 +38,12 @@
 *.color13: #d3869b
 *.color14: #8ec07c
 *.color15: #ebdbb2
-*.color256: #1d2021
-*.color257: #ebdbb2
-*.background: #282828
-*.foreground: #d79921
+*.color256: #ebdbb2
+*.color257: #282828
+*.background: #ebdbb2
+*.foreground: #ebdbb2
 
+/* dmenu.background: color0 */
 /* !! gruvbox light: */
 /* *.color0: #fbf1c7 */
 /* *.color1: #cc241d */
