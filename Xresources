@@ -1,5 +1,5 @@
 !! Transparency (0-1):
-*.alpha: 0.9
+/* *.alpha: 0.9 */
 
 !! Set a default font and font size as below:
 *.font: Cascadia Mono:size=10
@@ -16,13 +16,14 @@
 /* *.background: #282828 */
 /* *.foreground: #d79921 */
 
+
 #define blk #282828
-#define dmenu_font Cascadia Mono:size=13
+#define dmenu_font Cascadia Mono:size=10
+!! gruvbox:
 dmenu.background : blk
 dmenu.font : dmenu_font
-
-!! gruvbox:
-*.color0: blk
+dwm.selbordercolor: #d79921
+*.color0: #282828
 *.color1: #cc241d
 *.color2: #98971a
 *.color3: #d79921
@@ -40,8 +41,22 @@ dmenu.font : dmenu_font
 *.color15: #ebdbb2
 *.color256: #ebdbb2
 *.color257: #282828
-*.background: #ebdbb2
-*.foreground: #ebdbb2
+*.background: #282828
+*.foreground: #fabd2f
+
+/* dwm.normbgcolor:		#abd123 */
+/* dwm.normbordercolor: */
+/* dwm.normfgcolor: */
+/* dwm.selbgcolor: */
+/* dwm.selbordercolor: #fabd2f */
+/* dwm.selfgcolor: */
+/* dwm.borderpx: */
+/* dwm.snap: */
+/* dwm.showbar: */
+/* dwm.topbar: */
+/* dwm.nmaster: */
+/* dwm.resizehints: */
+/* dwm.mfact: */
 
 /* dmenu.background: color0 */
 /* !! gruvbox light: */
@@ -125,8 +140,7 @@ dmenu.font : dmenu_font
 /* !! xterm */
 /* *.color0:   #000000 */
 /* *.color1:   #cd0000 */
-/* *.color2:   #00cd00 */
-/* *.color3:   #cdcd00 */
+/* *.color2:   #00cd00 */ /* *.color3:   #cdcd00 */
 /* *.color4:   #0000cd */
 /* *.color5:   #cd00cd */
 /* *.color6:   #00cdcd */

@@ -2,17 +2,13 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
+# terminal launcher
 super + Return
 	st
 
-super + ctrl + Return
-	termite
-
 # program launcher
-super + @space
-	dmenu_run
-	# dmenu_run -b -fn 'Fira Code-13' -nb '#282828' -sb '#D79921' -nf '#A89984' -sf '#282828'
+super + o
+	dmenu_run -bw 3 -c -l 20 -i
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -20,172 +16,60 @@ super + Escape
 
 super + ctrl + x
 	reloadx && notify-send -u low "Xresources reloaded"
-#
-# bspwm hotkeys
-#
+
+F6
+	dunst_test
+F7
+	st -c "alsamixer" -e alsamixer
+F8
+	  wallpaper # select wallpaper script
+F9
+	mopidy & ; \
+	st -c "ncmpcpp" -e ncmpcpp
+ctrl + F9
+	killall -q mopidy && killall -q ncmpcpp && notify-send "Mopidy" "Closed"
+F10
+	mpd ; \
+	st -c "ncmpcpp" -e ncmpcpp
+ctrl + F10
+	killall -q mpd && killall -q ncmpcpp && notify-send "MPD" "Closed"
+F12
+	usb_mount
+ctrl + F12
+	usb_unmount
+XF86Display
+	monitor_dmenu
 
 # launch HTOP
 ctrl + alt + Delete
-	termite -e htop
-
-# launch sxiv at wallpaper directory
-super + F8
-	  wallpaper
-
-# quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
-
-# close and kill
-super + {_,shift + }q
-	bspc node -{c,k}
-
-# alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
-
-# send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
-
-# swap the current node and the biggest node
-super + g
-	bspc node -s biggest
-
-#
-# state/flags
-#
-
-# set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-
-# set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
-
-#
-# focus/swap
-#
-
-# focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
-
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
-
-# focus the next/previous node in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local
-
-# focus the next/previous desktop in the current monitor
-super + ctrl + {h,l}
- 	bspc desktop -f {prev,next}.local
-# super + bracket{left,right}
-# 	bspc desktop -f {prev,next}.local
-
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
-
-# focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
-
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
-
-#
-# preselect
-#
-
-# preselect the direction
-super + ctrl + shift + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
-# preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
-# cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
-
-#
-# move/resize
-#
-
-# expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-# contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-# move a floating window
-super + ctrl + alt + {h,j,k,l}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
-# super + {Left,Down,Up,Right}
-# 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-# make fish shell to play nice with bspwm
-set -U SXHKD_SHELL /usr/bin/bash
-
+	st -c "gotop" -e gotop -l minimal
 #
 # launch applications
 #
 
-# firefox
-super + F3
-	firefox
-
-# brave
-super + F2
-	brave
-
 # vivaldi
-super + F1
+super + v
 	vivaldi-stable
 
 # emacs
 super + shift + d
 	emacs
 
-# music ncmpcpp
-super + F10
-	mpd ; \
-	st -c ncmpcpp -e ncmpcpp
-super + shift + F10
-	killall -q mpd && killall -q ncmpcpp
+# file manager
+super + e
+	st -e lf
 
-super + F9
-	mopidy & ; \
-	termite -e ncmpcpp
-super + shift + F9
-	killall -q mopidy && killall -q ncmpcpp
-#
-# fn keys
-#
-
-# Alsa Master Volume control
-super + greater
-	amixer set Master 5%+
-super + less
- 	amixer set Master 5%-
+# volume control suing amixer
+super + alt + Prior
+	amixer -q set Master 5%+ 
+super + alt + Next
+ 	amixer -q set Master 5%-
 # XF86AudioRaiseVolume
-# 	amixer set Master 10%+
+	# amixer set Master 10%+
 # XF86AudioLowerVolume
-# 	amixer set Master 10%-
+	# amixer set Master 10%-
+# XF86BrightnessUp
+	# amixer set Master 10%-
 
 # mpc music control
 XF86AudioStop
@@ -197,10 +81,10 @@ XF86AudioNext
 XF86AudioPrev
 	mpc prev
 
-XF86MonBrightnessUp
-	fish ~/.scripts/brightness_control/./brightness_up.sh 0.1
-XF86MonBrightnessDown
-	fish ~/.scripts/brightness_control/./brightness_down.sh 0.1
+# XF86MonBrightnessUp
+	# fish ~/.scripts/brightness_control/./brightness_up.sh 0.1
+# XF86MonBrightnessDown
+	# fish ~/.scripts/brightness_control/./brightness_down.sh 0.1
 
 #
 # screen capture using maim

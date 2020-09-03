@@ -1,4 +1,8 @@
 source $HOME/.config/aliasrc
+# export EDITOR=nvim
+# export XDG_CONFIG_HOME=~/.config
+# export XDG_CACHE_HOME=~/.cache
+# export PATH="$PATH:$HOME/.scripts/"
 
 set fish_cursor_default block
 set fish_cursor_insert line

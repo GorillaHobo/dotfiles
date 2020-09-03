@@ -4,8 +4,9 @@
 set ratios "4:5"
 set info size
 set shell zsh
-set shellopts '-eu'
+set shellopts '-eu:--shwordsplit'
 set ifs "\n"
+set filesep "\n"
 set scrolloff 10
 set color256
 set icons
@@ -18,17 +19,17 @@ $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
 # cmds/functions
 cmd open ${{
 	case $(file --mime-type $f -b) in
-		# text/*) $EDITOR $fx ;;
-		text/*)  nvim $fx  ;;
-		# image/x-xcf|image/svg+xml) sid -f gimp $f >/dev/null 2>&1 ;;
-		image/x-xcf) notify-send -u low "GIMP" "$( basename $f )" && setsid -f gimp $f >/dev/null 2>&1 ;;
-		image/svg+xml) notify-send -u low "Inkscape" "$( basename $f )" && setsid -f inkscape $f >/dev/null 2>&1 ;;
-		image/*) notify-send -u low "SXIV" "$( basename $f )" && rifle-sxiv.sh $fx ;;
-		audio/*) notify-send -u low "Now Playing" "$(basename $f)" && mpv --audio-display=no $f ;; 
-		video/*) notify-send -u low "MPV" "$( basename $f )" && setsid -f mpv $fx -quiet >/dev/null 2>&1 ;;
-		application/pdf|application/epub*) notify-send -u low "Zathura" "$(basename $f)" && setsid -f zathura $fx >/dev/null 2>&1 ;;
-		application/vnd*) notify-send -u low "Libreoffice" "$(basename $f)" && setsid -f libreoffice --nologo $fx ;;
-		*) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+		text/*) emacs $f >/dev/null 2>&1 ;;
+		# text/*)  nvim $fx  ;;
+		image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
+		image/svg+xml) setsid -f inkscape $f >/dev/null 2>&1 ;;
+		image/*) rifle-sxiv.sh $f ;;
+		# video/*) launch_video $f ;;
+		video/*) mpv $fx -quiet >/dev/null 2>&1 ;;
+		application/pdf|application/epub*)  zathura $f >/dev/null 2>&1 ;;
+		# application/pdf|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+		application/vnd*) setsid -f libreoffice --nologo $fx >/dev/null 2>&1 ;;
+		# *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
 	esac
 }}
 
@@ -86,7 +87,7 @@ cmd unarchive $ {{
 #
 
 map <c-f> $lf -remote "send $id select '$(fzf)'"
-map g top
+map gg top
 map D delete
 # map C copyto
 # map M moveto
@@ -98,6 +99,7 @@ map o &mimeopen $f
 map O $mimeopen --ask $f
 map <c-z> unarchive
 map <c-n> create
+# map x clear
 
 # Renaming filename
 map A rename # at the very end
@@ -113,6 +115,3 @@ map <c-a> up
 map V push :!nvim<space>
 
 map <c-s> yank-path
-
-# quick jumps
-map ga cd ~/

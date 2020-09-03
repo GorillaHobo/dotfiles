@@ -49,3 +49,4 @@ nmap gsk <Plug>(easymotion-k)
 nmap gss <Plug>(easymotion-s)
 nmap cgss c<Plug>(easymotion-s)
 
+

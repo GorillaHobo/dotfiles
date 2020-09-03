@@ -7,7 +7,7 @@ alias v="nvim"
 alias vz=" v ~/.config/zsh/.zshrc"
 alias vfish=" v ~/.config/fish/config.fish"
 alias vbsp=" v ~/.config/bspwm/bspwmrc"
-alias vsx= " v ~/.config/sxhkd/sxhkdrc"
+alias vsx=" v ~/.config/sxhkd/sxhkdrc"
 alias vala= " v ~/.config/alacritty/alacritty.yml"
 alias vterm=" v ~/.config/termite/config"
 alias vvim=" v ~/.config/nvim/init.vim"
@@ -15,6 +15,7 @@ alias valias=" v ~/.config/aliasrc"
 alias vlf=" v ~/.config/lf/lfrc"
 alias vx=" v ~/.config/Xresources"
 alias vpicom=" v ~/.config/picom/picom.conf"
+alias vxinit=" v ~/.xinitrc"
 
 # nnn aliases 
 alias n="nnn"
@@ -28,6 +29,7 @@ alias nex="nnn /run/media/tony/"
 alias nmtp= "nnn ~/.mtp/"
 
 # lf aliases 
+alias scripts="lfcd ~/.local/bin"
 alias lf="lf"
 alias lfdown="lf ~/Storage/Downloads/"
 alias lfc="lf ~/.config/"
@@ -76,6 +78,10 @@ alias yta="yt -x -f bestaudio/best"
 alias ffmpeg="ffmpeg -hide_banner"
 
 # sxiv open all in directory
-alias sxiv="~/.scripts/rifle-sxiv.sh"
+alias sxiv="~/.local/bin/rifle-sxiv.sh"
 
+# Reload XResources
 alias reloadx="xrdb ~/.config/Xresources"
+
+# Load htop using termite
+# alias htop="termite -e htop"
