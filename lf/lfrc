@@ -82,6 +82,7 @@ cmd unarchive $ {{
 	esac
 }}
 
+
 #
 # Bindings
 #

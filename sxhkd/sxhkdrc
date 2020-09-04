@@ -33,6 +33,8 @@ F10
 	st -c "ncmpcpp" -e ncmpcpp
 ctrl + F10
 	killall -q mpd && killall -q ncmpcpp && notify-send "MPD" "Closed"
+F11
+	alarm &
 F12
 	usb_mount
 ctrl + F12
@@ -50,6 +52,8 @@ ctrl + alt + Delete
 # vivaldi
 super + v
 	vivaldi-stable
+super + shift + v
+	vivaldi-stable --incognito
 
 # emacs
 super + shift + d

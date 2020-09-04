@@ -21,5 +21,7 @@ set -g fish_key_bindings fish_vi_key_bindings
 # keybindings
 bind -M insert 'jj' 'set fish_bind_mode default ; commandline -f repaint'
 bind -M insert \cf 'accept-autosuggestion'
+bind -M insert \ck 'up-or-search'
+bind -M insert \cj 'down-or-search'
 
 set fish_color_selection --background='d79921'  
