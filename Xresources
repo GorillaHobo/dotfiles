@@ -23,6 +23,7 @@
 dmenu.background : blk
 dmenu.font : dmenu_font
 dwm.selbordercolor: #d79921
+/* dwm.selbordercolor: #d79921 */
 *.color0: #282828
 *.color1: #cc241d
 *.color2: #98971a

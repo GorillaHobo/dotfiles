@@ -309,7 +309,7 @@ c.colors.statusbar.command.fg = white
 
 ## Background color of the statusbar in private browsing + command mode.
 ## Type: QssColor
-c.colors.statusbar.command.private.bg = green
+c.colors.statusbar.command.private.bg = black
 
 ## Foreground color of the statusbar in private browsing + command mode.
 ## Type: QssColor
@@ -341,11 +341,11 @@ c.colors.statusbar.passthrough.fg = white
 
 ## Background color of the statusbar in private browsing mode.
 ## Type: QssColor
-# c.colors.statusbar.private.bg = '#666666'
+c.colors.statusbar.private.bg = green
 
 ## Foreground color of the statusbar in private browsing mode.
 ## Type: QssColor
-# c.colors.statusbar.private.fg = 'white'
+c.colors.statusbar.private.fg = black
 
 ## Background color of the progress bar.
 ## Type: QssColor
@@ -2002,6 +2002,7 @@ config.bind('l', 'scroll-px 75 0')
 # config.bind('pp', 'open -- {clipboard}')
 # config.bind('q', 'record-macro')
 # config.bind('r', 'reload')
+config.bind('<Ctrl-R>', ':config-source')
 # config.bind('sf', 'save')
 # config.bind('sk', 'set-cmd-text -s :bind')
 # config.bind('sl', 'set-cmd-text -s :set -t')
@@ -2077,8 +2078,6 @@ config.bind('<Ctrl-U>', 'undo')
 # config.bind('J', 'scroll down', mode='caret')
 # config.bind('K', 'scroll up', mode='caret')
 # config.bind('L', 'scroll right', mode='caret')
-# config.bind('V', 'toggle-selection --line', mode='caret')
-# config.bind('Y', 'yank selection -s', mode='caret')
 # config.bind('[', 'move-to-start-of-prev-block', mode='caret')
 # config.bind(']', 'move-to-start-of-next-block', mode='caret')
 # config.bind('b', 'move-to-prev-word', mode='caret')

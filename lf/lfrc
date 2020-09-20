@@ -25,6 +25,7 @@ cmd open ${{
 		image/svg+xml) setsid -f inkscape $f >/dev/null 2>&1 ;;
 		image/*) rifle-sxiv.sh $f ;;
 		# video/*) launch_video $f ;;
+		audio/*) mpv --audio-display=no $fx ;;
 		video/*) mpv $fx -quiet >/dev/null 2>&1 ;;
 		application/pdf|application/epub*)  zathura $f >/dev/null 2>&1 ;;
 		# application/pdf|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
@@ -111,8 +112,8 @@ map a push A<a-b> # after extention
 map B bulkrename
 map b $setbg $f
 
-map <c-e> down
-map <c-a> up
+# map <c-e> down
+# map <c-a> up
 map V push :!nvim<space>
 
 map <c-s> yank-path

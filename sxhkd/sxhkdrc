@@ -17,27 +17,27 @@ super + Escape
 super + ctrl + x
 	reloadx && notify-send -u low "Xresources reloaded"
 
-F6
+super + F6
 	dunst_test
-F7
+super + F7
 	st -c "alsamixer" -e alsamixer
-F8
+super + F8
 	  wallpaper # select wallpaper script
-F9
+super + F9
 	mopidy & ; \
 	st -c "ncmpcpp" -e ncmpcpp
-ctrl + F9
+super + ctrl + F9
 	killall -q mopidy && killall -q ncmpcpp && notify-send "Mopidy" "Closed"
-F10
+super + F10
 	mpd ; \
 	st -c "ncmpcpp" -e ncmpcpp
-ctrl + F10
+super + ctrl + F10
 	killall -q mpd && killall -q ncmpcpp && notify-send "MPD" "Closed"
-F11
+super + F11
 	alarm &
-F12
+super + F12
 	usb_mount
-ctrl + F12
+super + ctrl + F12
 	usb_unmount
 XF86Display
 	monitor_dmenu
@@ -54,6 +54,11 @@ super + v
 	vivaldi-stable
 super + shift + v
 	vivaldi-stable --incognito
+
+super + n
+	qutebrowser
+super + shift + n
+	exec qutebrowser ":open -p"
 
 # emacs
 super + shift + d
