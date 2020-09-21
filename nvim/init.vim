@@ -5,7 +5,7 @@ Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
-Plug 'omnisharp/omnisharp-vim'
+" Plug 'omnisharp/omnisharp-vim'
 Plug 'ap/vim-css-color'
 Plug 'dag/vim-fish'
 Plug 'shinchu/lightline-gruvbox.vim'
@@ -23,10 +23,9 @@ set smartindent
 colorscheme gruvbox
 set background=dark
 
-let g:gruvbox_contrast = 'hard'
-
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
+let g:gruvbox_contrast = 'hard'
 
 let mapleader=" "
 imap jj <Esc>

@@ -3,8 +3,8 @@
 #
 
 # terminal launcher
-super + Return
-	st
+# super + Return
+	# st
 
 # program launcher
 super + o
