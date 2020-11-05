@@ -2,7 +2,7 @@
 /* *.alpha: 0.9 */
 
 !! Set a default font and font size as below:
-*.font: Cascadia Mono:size=10
+*.font: Cascadia Code:size=10
 
 /* name		dark	light */
 /* black	0	8 */
@@ -18,7 +18,7 @@
 
 
 #define blk #282828
-#define dmenu_font Cascadia Mono:size=10
+#define dmenu_font Cascadia Code:size=10
 !! gruvbox:
 dmenu.background : blk
 dmenu.font : dmenu_font
@@ -48,9 +48,9 @@ dwm.selbordercolor: #d79921
 /* dwm.normbgcolor:		#abd123 */
 /* dwm.normbordercolor: */
 /* dwm.normfgcolor: */
-/* dwm.selbgcolor: */
+dwm.selbgcolor: #458588
 /* dwm.selbordercolor: #fabd2f */
-/* dwm.selfgcolor: */
+dwm.selfgcolor: #ebdbb2
 /* dwm.borderpx: */
 /* dwm.snap: */
 /* dwm.showbar: */

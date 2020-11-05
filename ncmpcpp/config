@@ -29,7 +29,7 @@ main_window_color = "default"
 centered_cursor = "yes"
 enable_window_title = "yes"
 external_editor = "nvim"
-execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title%\n%artist% - %album%' current)"
+execute_on_song_change = dunstify -r "112" "Now Playing" "$(mpc --format '%title%\n%artist% - %album%' current)"
 # execute_on_song_change = ~/.ncmpcpp/./art.sh
 
 [visualizer]

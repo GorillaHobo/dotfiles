@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: arrow
+# key: arrow
+# --
+
+(${1:}) => ${2:}

@@ -1,8 +1,9 @@
 source $HOME/.config/aliasrc
-# export EDITOR=nvim
-# export XDG_CONFIG_HOME=~/.config
-# export XDG_CACHE_HOME=~/.cache
+export EDITOR=nvim
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$HOME/.config/emacs/bin:$PATH"
 
 set fish_cursor_default block
 set fish_cursor_insert line
@@ -11,15 +12,7 @@ set fish_visual block
 
 # set fish_greeting ꦱ ꦩ꧀ꦱ ꦫ​ ꦑꦻ ꦫꦶ​ꦒ ꦫ ꦲ ꦂꦱ ꦪ 
 function fish_greeting
-	# echo -e (date +"%A,\n%d %B %Y")
-	figlet -d $HOME/.local/share/figlet/figlet-fonts -f pagga.flf (date +"%H:%M") | lolcat
-	echo ""
 end
-
-function my_figlet
-	figlet -d $HOME/.local/share/figlet/figlet-fonts -f $argv[2]'.flf' $argv[1]
-end
-
 
 # turn off vi mode indicator
 function fish_mode_prompt 

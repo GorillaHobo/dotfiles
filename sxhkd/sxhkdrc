@@ -50,10 +50,17 @@ ctrl + alt + Delete
 #
 
 # vivaldi
+# super + v
+# 	vivaldi-stable
+# super + shift + v
+# 	vivaldi-stable --incognito
+#
+
+# brave
 super + v
-	vivaldi-stable
+	brave
 super + shift + v
-	vivaldi-stable --incognito
+	brave --incognito
 
 super + n
 	qutebrowser
@@ -70,9 +77,14 @@ super + e
 
 # volume control suing amixer
 super + alt + Prior
-	amixer -q set Master 5%+ 
+	volume-control "increase"
 super + alt + Next
- 	amixer -q set Master 5%-
+	volume-control "decrease"
+
+super + ctrl + Prior
+	light-control "increase"
+super + ctrl + Next
+	light-control "decrease"
 # XF86AudioRaiseVolume
 	# amixer set Master 10%+
 # XF86AudioLowerVolume

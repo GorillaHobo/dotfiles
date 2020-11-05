@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: buttonLog
+# key: btnlog
+# --
+
+<button onClick={ () => console.log(${1:}) }>Check</button>

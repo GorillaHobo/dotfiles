@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: CSSTransition
+# key: CSSTransition
+# --
+
+<CSSTransition
+    in={${1:}}
+    timeout={${2:300}}
+    classNames="${3:}"
+    ${3:unmountOnExit}
+>
+    $0
+</CSSTransition>
