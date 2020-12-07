@@ -1,5 +1,5 @@
 #+TITLE: Qutebrowser config
-+PROPERTY: header-args :tangle testing.py
+#+PROPERTY: header-args :tangle config.py
 
 * Color Variables
 Uncomment code block to use color theme
@@ -1522,7 +1522,7 @@ c.fonts.web.size.default = 15
 ** Default font size (in pixels) for fixed-pitch text.
 ## Type: Int
 #+begin_src python
-# c.fonts.web.size.default_fixed = 13
+c.fonts.web.size.default_fixed = 14
 #+end_src
 
 ** Hard minimum font size (in pixels).
@@ -1570,7 +1570,7 @@ c.hints.border = '0px solid #E3BE23'
 ** Characters used for hint strings.
 ## Type: UniqueCharString
 #+begin_src python
-c.hints.chars = 'asdfghjkluei'
+c.hints.chars = 'asdfghjkl'
 #+end_src
 
 ** Dictionary file to be used by the word hints.
@@ -2609,8 +2609,10 @@ config.bind(';V', 'spawn mpv {url}')
 config.bind(';v', 'hint links spawn mpv {hint-url}')
 config.bind('ed', 'hint links spawn st -e aria2c --dir=/home/tony/Storage/Downloads \'{hint-url}\'')
 config.bind('et', 'hint links spawn st -e aria2c --dir=/home/tony/Storage/Downloads/Torrents --seed-time=0 \'{hint-url}\'')
-config.bind('ev', 'hint links spawn st -e youtube-dl --config-location ~/.config/youtube-dl/config \'{hint-url}\'')
-config.bind('ea', 'hint links spawn st -e youtube-dl --config-location ~/.config/youtube-dl/music \'{hint-url}\'')
+# config.bind('ev', 'hint links spawn st -e youtube-dl --config-location ~/.config/youtube-dl/config \'{hint-url}\'')
+config.bind('ev', 'hint links userscript youtube_video_downloader')
+config.bind('ea', 'hint links userscript youtube_audio_downloader')
+# config.bind('ea', 'hint links spawn st -e youtube-dl --config-location ~/.config/youtube-dl/music \'{hint-url}\'')
 #+end_src
 ** Bindings for normal mode
 #+begin_src python
@@ -2823,4 +2825,44 @@ config.bind('<Ctrl-Shift-O>', 'set-cmd-text -s :open -b')
 # config.bind('{{', 'navigate prev -t')
 # config.bind('}}', 'navigate next -t')
 #+end_src
+** Bondings for changing css stylings
+*** Apprentice 
+#+begin_src python
+config.bind(',ap', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""')
+#+end_src
+*** Dracula 
+#+begin_src python
+config.bind(',dr', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/darculized/darculized-all-sites.css ""')
+#+end_src
+*** Apprentice 
+#+begin_src python
+config.bind(',gr', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""')
+#+end_src
+*** Apprentice 
+#+begin_src python
+config.bind(',sd', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""')
+#+end_src
+*** Apprentice 
+#+begin_src python
+config.bind(',sl', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""')
+#+end_src
+** Bindings for readline insert mode
+*** Shortcuts for cursor navigation in insert mode
+#+begin_src python
+config.bind("<Ctrl-h>", "fake-key <BackSpace>", "insert")
+config.bind("<Ctrl-a>", "fake-key <Home>", "insert")
+config.bind("<Ctrl-e>", "fake-key <End>", "insert")
+config.bind("<Ctrl-b>", "fake-key <Left>", "insert")
+config.bind("<Mod1-b>", "fake-key <Ctrl-Left>", "insert")
+config.bind("<Ctrl-f>", "fake-key <Right>", "insert")
+config.bind("<Mod1-f>", "fake-key <Ctrl-Right>", "insert")
+config.bind("<Ctrl-k>", "fake-key <Up>", "insert")
+config.bind("<Ctrl-j>", "fake-key <Down>", "insert")
+config.bind("<Mod1-d>", "fake-key <Ctrl-Delete>", "insert")
+config.bind("<Ctrl-d>", "fake-key <Delete>", "insert")
+config.bind("<Ctrl-w>", "fake-key <Ctrl-Backspace>", "insert")
+config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
+config.bind("<Ctrl-l>", "fake-key <Shift-End><Delete>", "insert")
+#+end_src
 
+#+RESULTS:

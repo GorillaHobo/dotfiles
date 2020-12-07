@@ -19,7 +19,7 @@ $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
 # cmds/functions
 cmd open ${{
 	case $(file --mime-type $f -b) in
-		text/*) emacs $f >/dev/null 2>&1 ;;
+		text/*) emacsclient -c -n $f >/dev/null 2>&1 ;;
 		# text/*)  nvim $fx  ;;
 		image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
 		image/svg+xml) setsid -f inkscape $f >/dev/null 2>&1 ;;

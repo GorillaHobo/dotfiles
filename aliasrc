@@ -58,6 +58,8 @@ alias getrgb="maim -st 0 | convert - -resize 1x1! -format '%[pixel:p{0,0}]' info
 
 # start factorio
 alias factorio="sh ~/Storage/Games/Factorio/Factorio/run.sh"
+# start Slay The Spire
+alias slay="sh ~/Storage/Games/Slay\ the\ Spire/run.sh"
 
 # change random wallpaper
 alias wallpaper="sxiv ~/Storage/Downloads/Wallpapers/*"
@@ -83,5 +85,5 @@ alias sxiv="~/.local/bin/rifle-sxiv.sh"
 # Reload XResources
 alias reloadx="xrdb ~/.config/Xresources"
 
-# Load htop using termite
-# alias htop="termite -e htop"
+# youtube-dl
+alias yt="youtube-dl"

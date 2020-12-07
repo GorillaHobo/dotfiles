@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: SwitchTransition
+# key: SwitchTransition
+# --
+<SwitchTransition>
+    <CSSTransition
+        key={$1}
+        timeout={${2:500}}
+        classNames="$3"
+    >
+      $4
+    </CSSTransition>/>
+</SwitchTransition>

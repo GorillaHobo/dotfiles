@@ -3,12 +3,12 @@
 # key: rfc
 # --
 
-import React from 'react';
+import { $1 } from 'react';
 
-const ${1:} = ($3) => {
-    return(
-    $5
-)
+const ${2:`(f-base buffer-file-name)`} = (${3:props}) => {
+  return(
+    $0
+  )
 }
 
-export default ${1:$(yas-text)}
+export default ${2:$(yas-text)};

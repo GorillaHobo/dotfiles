@@ -7,7 +7,7 @@
 	# st
 
 # program launcher
-super + o
+super + shift + Return
 	dmenu_run -bw 3 -c -l 20 -i
 
 # make sxhkd reload its configuration files:
@@ -57,10 +57,10 @@ ctrl + alt + Delete
 #
 
 # brave
-super + v
-	brave
-super + shift + v
-	brave --incognito
+# super + v
+# 	brave
+# super + shift + v
+# 	brave --incognito
 
 super + n
 	qutebrowser
@@ -70,6 +70,8 @@ super + shift + n
 # emacs
 super + shift + d
 	emacs
+super + d
+	emacsclient -c -n
 
 # file manager
 super + e
