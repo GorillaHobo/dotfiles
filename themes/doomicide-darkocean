@@ -1,0 +1,19 @@
+/* --- doomicide-darkocean --- */
+#define COLOR0 #000000
+#define COLOR1 #571dc2
+#define COLOR2 #14db49
+#define COLOR3 #403d70
+#define COLOR4 #385a70
+#define COLOR5 #384894
+#define COLOR6 #4f3a5e
+#define COLOR7 #999999
+#define COLOR8 #38372c
+#define COLOR9 #7c54b0
+#define COLOR10 #a2e655
+#define COLOR11 #9c6f59
+#define COLOR12 #323f5c
+#define COLOR13 #5e6c99
+#define COLOR14 #667d77
+#define COLOR15 #ffffff
+#define BACKGROUND #000000
+#define FOREGROUND #ffffff

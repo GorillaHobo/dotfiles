@@ -3,25 +3,32 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
 " Plug 'omnisharp/omnisharp-vim'
+Plug 'mhartington/oceanic-next'
 Plug 'ap/vim-css-color'
 Plug 'dag/vim-fish'
 Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'scrooloose/syntastic'
 call plug#end()
 
+" Or if you have Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
 
-syntax on
+" Theme
+syntax enable
+colorscheme OceanicNext
+
 set number! relativenumber!
 set autoindent
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set smartindent
 
-colorscheme gruvbox
-set background=dark
+" set background=dark
 
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
@@ -47,5 +54,4 @@ nmap gsj <Plug>(easymotion-j)
 nmap gsk <Plug>(easymotion-k)
 nmap gss <Plug>(easymotion-s)
 nmap cgss c<Plug>(easymotion-s)
-
 

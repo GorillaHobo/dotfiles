@@ -18,15 +18,16 @@ alias vpicom=" v ~/.config/picom/picom.conf"
 alias vxinit=" v ~/.xinitrc"
 
 # nnn aliases 
-alias n="nnn"
-alias ndown="nnn ~/Storage/Downloads/"
-alias nc="nnn ~/.config/"
-alias ns="nnn ~/Storage/"
-alias ntor="nnn ~/Storage/Downloads/Torrents/"
-alias nd="nnn ~/Documents/"
-alias ndoc="nnn ~/Storage/Documents/"
-alias nex="nnn /run/media/tony/"
-alias nmtp= "nnn ~/.mtp/"
+alias nnn="nnn -C"
+alias n="nnn -C"
+alias ndown="nnn -C ~/Storage/Downloads/"
+alias nc="nnn -C ~/.config/"
+alias ns="nnn -C~/Storage/"
+alias ntor="nnn -C~/Storage/Downloads/Torrents/"
+alias nd="nnn -C~/Documents/"
+alias ndoc="nnn -C~/Storage/Documents/"
+alias nex="nnn -C/run/media/tony/"
+alias nmtp= "nnn -C~/.mtp/"
 
 # lf aliases 
 alias scripts="lfcd ~/.local/bin"
@@ -43,7 +44,7 @@ alias lfmtp="lf ~/.mtp/"
 alias suckless="lfcd ~/Storage/Masters/Suckless/"
 
 # emacs aliases
-alias personal="emacs ~/Storage/Documents/personal/todos.org"
+alias todos="emacsclient -n -c ~/Documents/org/todos.org"
 
 # mount usb
 alias usbmount="udisksctl mount -b /dev/sdc1"
@@ -87,3 +88,5 @@ alias reloadx="xrdb ~/.config/Xresources"
 
 # youtube-dl
 alias yt="youtube-dl"
+
+

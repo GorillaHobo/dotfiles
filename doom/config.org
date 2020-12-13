@@ -1,0 +1,81 @@
+#+TITLE: Doom emacs config
+#+PROPERTY: header-args :tangle config.el
+
+* General Settings
+** User Identity
+Some functionality uses this to identify you, e.g. GPG configuration, email clients, file templates and snippets.
+#+begin_src emacs-lisp
+(setq user-full-name "Galih Wicaksono"
+      user-mail-address "galihwicaksono90@gmail.com")
+#+end_src
+** Font Settings
+Doom exposes five (optional) variables for controlling fonts in Doom. Here
+are the three important ones:
+
++ `doom-font'
++ `doom-variable-pitch-font'
++ `doom-big-font' -- used for `doom-big-font-mode'; use this for
+  presentations or streaming.
+
+They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
+font string. You generally only need these two.
+
+#+begin_src emacs-lisp
+(setq doom-font (font-spec :family "Cascadia Code" :size 13 :weight 'regular)
+   doom-variable-pitch-font (font-spec :family "Fira Code" :size 13))
+
+(after! doom-themes
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
+(custom-set-faces!
+  '(font-lock-comment-face :slant italic)
+  '(font-lock-keyword-face :slant italic))
+#+end_src
+** Line Number Settings
+This determines the style of line numbers in effect. If set to `nil', line
+numbers are disabled. For relative line numbers, set this to `relative'.
+
+#+begin_src emacs-lisp
+(setq display-line-numbers-type `relative)
+#+end_src
+
+** Theme Settings
+There are two ways to load a theme. Both assume the theme is installed and
+available. You can either set `doom-theme' or manually load a theme with the `load-theme' function. This is the default:
+
+#+begin_src emacs-lisp
+(setq doom-theme 'doom-oceanic-next)
+#+end_src
+
+* Org-mode Settings
+** Default Directory
+If you use `org' and don't want your org files in the default location below,
+change `org-directory'. It must be set before org loads!
+
+#+begin_src emacs-lisp
+(setq org-directory "~/Documents/org/")
+(setq org-agenda-files "~/Documents/org/todos.org")
+(setq org-log-done 'note)
+#+end_src
+** Org-Superstar
+#+begin_src emacs-lisp
+(after! org
+  (require 'org-superstar)
+  (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1))))
+#+end_src
+* Major-mode Settings
+- Rjsx on js files
+    #+begin_src emacs-lisp
+    (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
+    #+end_src
+* Modules
+** Lorem-ipsum
+space-i-l to insert lorem ipsum
+#+begin_src emacs-lisp
+(map! :leader
+      (:prefix-map ("i" . "insert")
+       (:prefix ("l" . "Lorem Ipsum")
+        :desc "Insert List" "l" #'lorem-ipsum-insert-list
+        :desc "Insert Sentence" "s" #'lorem-ipsum-insert-sentences
+        :desc "Insert Paragraph" "p" #'lorem-ipsum-insert-paragraphs)))
+#+end_src

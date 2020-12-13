@@ -51,3 +51,5 @@
 
 (package! lorem-ipsum)
 (package! org-superstar)
+(package! arduino-mode)
+(package! arduino-cli-mode)

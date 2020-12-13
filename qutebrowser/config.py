@@ -1,210 +1,153 @@
-# ============================
-# Color Scheme
-# ============================
-
-# Gruvbox
-black           = '#282828'
-white           = '#ebdbb2'
-blue            = '#458588'
-lightblue       = '#83a598'
-yellow          = '#d79921'
-lightyellow     = '#fabd2f'
-red             = '#cc241d'
-lightred        = '#fb4934'
-green           = '#689d6a'
-lightgreen      = '#b8bb26'
-magenta         = '#b16286'
-lightmagenta    = '#d3869b'
+import subprocess
+import os
 
 # ============================
 # Color Settings
 # ============================
 
+def read_xresources(prefix):
+    """
+    read settings from xresources
+    """
+    props = {}
+    x = subprocess.run(["xrdb", "-query"], stdout=subprocess.PIPE)
+    lines = x.stdout.decode().split("\n")
+    for line in filter(lambda l: l.startswith(prefix), lines):
+        prop, _, value = line.partition(":\t")
+        props[prop] = value
+    return props
+
+xresources = read_xresources("*")
+
+# ============================
+# Color Scheme
+# ============================
+
+# black           = '#282828'
+# white           = '#ebdbb2'
+# blue            = '#458588'
+# lightblue       = '#83a598'
+# yellow          = '#d79921'
+# lightyellow     = '#fabd2f'
+# red             = '#cc241d'
+# lightred        = '#fb4934'
+# green           = '#689d6a'
+# lightgreen      = '#b8bb26'
+# magenta         = '#b16286'
+# lightmagenta    = '#d3869b'
+
+black           = xresources["*.color0"]
+white           = xresources["*.color15"]
+blue            = xresources["*.color4"]
+lightblue       = xresources["*.color12"]
+yellow          = xresources["*.color3"]
+lightyellow     = xresources["*.color11"]
+red             = xresources["*.color1"]
+lightred        = xresources["*.color9"]
+green           = xresources["*.color6"]
+lightgreen      = xresources["*.color10"]
+magenta         = xresources["*.color5"]
+lightmagenta    = xresources["*.color13"]
+lightwhite      = xresources["*.color7"]
+background      = xresources["*.background"]
+foreground      = xresources["*.foreground"]
+
 c.colors.completion.category.bg = blue
-
 c.colors.completion.category.border.bottom = blue
-
 c.colors.completion.category.border.top = blue
-
 c.colors.completion.category.fg = white
-
 c.colors.completion.even.bg =  black
-
 c.colors.completion.fg = [white, yellow, white]
-
 c.colors.completion.item.selected.bg = yellow
-
 c.colors.completion.item.selected.border.bottom = yellow
-
 c.colors.completion.item.selected.border.top = yellow
-
 c.colors.completion.item.selected.fg = black
-
 c.colors.completion.item.selected.match.fg = white
-
 c.colors.completion.match.fg = yellow
-
 c.colors.completion.odd.bg = black
-
 c.colors.completion.scrollbar.bg = black
 c.colors.completion.scrollbar.bg = '#333333'#
-
 c.colors.completion.scrollbar.fg = white
-
 # c.colors.contextmenu.disabled.bg = None
-
 # c.colors.contextmenu.disabled.fg = None
-
 # c.colors.contextmenu.menu.bg = None
-
 # c.colors.contextmenu.menu.fg = None
-
 # c.colors.contextmenu.selected.bg = None
-
 # c.colors.contextmenu.selected.fg = None
-
 c.colors.downloads.bar.bg = black
-
 c.colors.downloads.error.bg = red
-
 c.colors.downloads.error.fg = white
-
 c.colors.downloads.start.bg = yellow
-
 c.colors.downloads.start.fg = black
-
 c.colors.downloads.stop.bg = blue
-
 c.colors.downloads.stop.fg = white
-
 c.colors.downloads.system.bg = 'none'
-
 c.colors.downloads.system.fg = 'none'
-
 c.colors.hints.bg = lightyellow
-
 c.colors.hints.fg = black
-
 c.colors.hints.match.fg = white
-
 c.colors.keyhint.bg = 'rgba(40, 40, 40, 90%)'
-
 c.colors.keyhint.fg = white
-
 c.colors.keyhint.suffix.fg = yellow
-
 c.colors.messages.error.bg = red
-
 c.colors.messages.error.border = red
-
 c.colors.messages.error.fg = white
-
 c.colors.messages.info.bg = black
-
 c.colors.messages.info.border = black
-
 c.colors.messages.info.fg = white
-
 c.colors.messages.warning.bg = yellow
-
-c.colors.prompts.border = '0px solid black'
-
+c.colors.messages.warning.border = yellow
+c.colors.messages.warning.fg = white
+c.colors.prompts.bg = black
+c.colors.prompts.border = '0px solid black'   
 c.colors.prompts.fg = white
-
 c.colors.prompts.selected.bg = yellow
-
 c.colors.statusbar.caret.bg = magenta
-
 c.colors.statusbar.caret.fg = white
-
 c.colors.statusbar.caret.selection.bg = lightmagenta
-
 c.colors.statusbar.caret.selection.fg = white
-
 c.colors.statusbar.command.bg = black
-
 c.colors.statusbar.command.fg = white
-
 c.colors.statusbar.command.private.bg = black
-
 c.colors.statusbar.command.private.fg = white
-
 c.colors.statusbar.insert.bg = blue
-
 c.colors.statusbar.insert.fg = white
-
 c.colors.statusbar.normal.bg = black
-
 c.colors.statusbar.normal.fg = white
-
 c.colors.statusbar.passthrough.bg = green
-
 c.colors.statusbar.passthrough.fg = white
-
 c.colors.statusbar.private.bg = black
-
 c.colors.statusbar.private.fg = yellow
-
 c.colors.statusbar.progress.bg = white
-
 c.colors.statusbar.url.error.fg = red
-
 c.colors.statusbar.url.fg = white
-
 c.colors.statusbar.url.hover.fg = green
-
 c.colors.statusbar.url.success.http.fg = lightgreen
-
 c.colors.statusbar.url.success.https.fg = blue
-
 c.colors.statusbar.url.warn.fg = yellow
-
 c.colors.tabs.bar.bg = blue
-
 c.colors.tabs.even.bg = black
-
 c.colors.tabs.even.fg = white
-
 c.colors.tabs.indicator.error = red
-
 c.colors.tabs.indicator.start = blue
-
 c.colors.tabs.indicator.stop = blue
-
 # c.colors.tabs.indicator.system = 'rgb'
-
 c.colors.tabs.odd.bg = black
-
 c.colors.tabs.odd.fg = white
-
 c.colors.tabs.pinned.even.bg = black
-
 c.colors.tabs.pinned.even.fg = white
-
 c.colors.tabs.pinned.odd.bg = black
-
 c.colors.tabs.pinned.odd.fg = white
-
 c.colors.tabs.pinned.selected.even.bg = blue
-
 c.colors.tabs.pinned.selected.even.fg = white
-
 c.colors.tabs.pinned.selected.odd.bg = blue
-
 c.colors.tabs.pinned.selected.odd.fg = white
-
-c.colors.tabs.selected.even.bg = blue
-
-c.colors.tabs.selected.even.fg = white
-
-c.colors.tabs.selected.odd.bg = blue
-
-c.colors.tabs.selected.odd.fg = white
-
+c.colors.tabs.selected.even.bg = lightblue
+c.colors.tabs.selected.even.fg = lightwhite
+c.colors.tabs.selected.odd.bg = lightblue
+c.colors.tabs.selected.odd.fg = lightwhite
 # c.colors.webpage.bg = white
-
 # c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
-
 # c.colors.webpage.darkmode.contrast = 0.0
 
 # c.colors.webpage.darkmode.enabled = False
@@ -430,7 +373,7 @@ c.fonts.web.family.standard = 'SNFS Display'
 
 c.fonts.web.size.default = 15
 
-# c.fonts.web.size.default_fixed = 13
+c.fonts.web.size.default_fixed = 14
 
 # c.fonts.web.size.minimum = 0
 
@@ -446,7 +389,7 @@ c.fonts.web.size.default = 15
 
 c.hints.border = '0px solid #E3BE23'
 
-c.hints.chars = 'asdfghjkluei'
+c.hints.chars = 'asdfghjkl'
 
 # c.hints.dictionary = '/usr/share/dict/words'
 
@@ -780,8 +723,10 @@ config.bind(';V', 'spawn mpv {url}')
 config.bind(';v', 'hint links spawn mpv {hint-url}')
 config.bind('ed', 'hint links spawn st -e aria2c --dir=/home/tony/Storage/Downloads \'{hint-url}\'')
 config.bind('et', 'hint links spawn st -e aria2c --dir=/home/tony/Storage/Downloads/Torrents --seed-time=0 \'{hint-url}\'')
-config.bind('ev', 'hint links spawn st -e youtube-dl --config-location ~/.config/youtube-dl/config \'{hint-url}\'')
-config.bind('ea', 'hint links spawn st -e youtube-dl --config-location ~/.config/youtube-dl/music \'{hint-url}\'')
+# config.bind('ev', 'hint links spawn st -e youtube-dl --config-location ~/.config/youtube-dl/config \'{hint-url}\'')
+config.bind('ev', 'hint links userscript youtube_video_downloader')
+config.bind('ea', 'hint links userscript youtube_audio_downloader')
+# config.bind('ea', 'hint links spawn st -e youtube-dl --config-location ~/.config/youtube-dl/music \'{hint-url}\'')
 
 config.bind(';z', 'hint images download')
 config.bind('<Ctrl-Shift-h>', 'tab-move -')
@@ -992,8 +937,27 @@ config.bind('<Ctrl-Shift-O>', 'set-cmd-text -s :open -b')
 # config.bind('{{', 'navigate prev -t')
 # config.bind('}}', 'navigate next -t')
 
-c.colors.messages.warning.border = yellow
+config.bind(',ap', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""')
 
-c.colors.messages.warning.fg = white
+config.bind(',dr', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/darculized/darculized-all-sites.css ""')
 
-c.colors.prompts.bg = black
+config.bind(',gr', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""')
+
+config.bind(',sd', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""')
+
+config.bind(',sl', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""')
+
+config.bind("<Ctrl-h>", "fake-key <BackSpace>", "insert")
+config.bind("<Ctrl-a>", "fake-key <Home>", "insert")
+config.bind("<Ctrl-e>", "fake-key <End>", "insert")
+config.bind("<Ctrl-b>", "fake-key <Left>", "insert")
+config.bind("<Mod1-b>", "fake-key <Ctrl-Left>", "insert")
+config.bind("<Ctrl-f>", "fake-key <Right>", "insert")
+config.bind("<Mod1-f>", "fake-key <Ctrl-Right>", "insert")
+config.bind("<Ctrl-k>", "fake-key <Up>", "insert")
+config.bind("<Ctrl-j>", "fake-key <Down>", "insert")
+config.bind("<Mod1-d>", "fake-key <Ctrl-Delete>", "insert")
+config.bind("<Ctrl-d>", "fake-key <Delete>", "insert")
+config.bind("<Ctrl-w>", "fake-key <Ctrl-Backspace>", "insert")
+config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
+config.bind("<Ctrl-l>", "fake-key <Shift-End><Delete>", "insert")

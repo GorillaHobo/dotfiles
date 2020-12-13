@@ -17,6 +17,9 @@ super + Escape
 super + ctrl + x
 	reloadx && notify-send -u low "Xresources reloaded"
 
+super + alt + q
+	restart_dwm
+
 super + F6
 	dunst_test
 super + F7
@@ -83,7 +86,7 @@ super + alt + Prior
 super + alt + Next
 	volume-control "decrease"
 
-super + ctrl + Prior
+super + ctrl + Prior 
 	light-control "increase"
 super + ctrl + Next
 	light-control "decrease"
@@ -127,5 +130,5 @@ shift + ctrl + Print
 shift + ctrl + alt + Print
 	get_rgb
 
-
-
+super + ctrl + shift + t
+	change_theme
