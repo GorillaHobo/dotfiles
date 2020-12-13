@@ -1,18 +1,18 @@
 # name: sashimi
 function fish_prompt
   set -l last_status $status
-  set -l cyan (set_color -o cyan)
-  set -l yellow (set_color -o yellow)
-  set -g red (set_color -o red)
-  set -g blue (set_color -o blue)
-  set -l green (set_color -o green)
-  set -g normal (set_color normal)
+  set -l cyan (set_color -o (get_x_color color14))
+  set -l yellow (set_color -o (get_x_color color12))
+  set -g red (set_color -o (get_x_color color9))
+  set -g blue (set_color -o (get_x_color color13))
+  set -l green (set_color -o (get_x_color color11))
+  set -g normal (set_color (get_x_color foreground))
 
   set -l ahead (_git_ahead)
   set -g whitespace ' '
 
   if test $last_status = 0
-    set initial_indicator "$green◆"
+    set initial_indicator "$yellow◆"
     set status_indicator "$normal❯$cyan❯$green❯"
   else
     set initial_indicator "$red✖ $last_status"

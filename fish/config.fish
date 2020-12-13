@@ -29,7 +29,7 @@ set fish_color_quote (get_x_color foreground) >/dev/null 2>&1
 set fish_color_normal (get_x_color color8) >/dev/null 2>&1
 set fish_color_comment (get_x_color color10) --bold >/dev/null 2>&1
 set fish_color_command (get_x_color color12) --bold >/dev/null 2>&1
-set fish_color_param (get_x_color color11) --bold >/dev/null 2>&1
-set fish_color_autosuggestion (get_x_color color4)  >/dev/null 2>&1
+set fish_color_param (get_x_color foreground) --bold >/dev/null 2>&1
+set fish_color_autosuggestion (get_x_color color6)  >/dev/null 2>&1
 set fish_color_redirection (get_x_color color10)  >/dev/null 2>&1
 set fish_color_error (get_x_color color9)  >/dev/null 2>&1
