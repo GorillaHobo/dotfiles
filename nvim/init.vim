@@ -20,7 +20,8 @@ endif
 
 " Theme
 syntax enable
-colorscheme OceanicNext
+colorscheme default
+" colorscheme OceanicNext
 
 set number! relativenumber!
 set autoindent
@@ -35,7 +36,7 @@ let g:lightline.colorscheme = 'gruvbox'
 let g:gruvbox_contrast = 'hard'
 
 let mapleader=" "
-imap jj <Esc>
+" imap jj <Esc>
 imap <C-f> <Esc>la
 imap <C-b> <Esc>ha
 
