@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/tony/.config/fish/functions'
+let g:netrw_dirhist_4='/home/tony/.config/emacs/.local/straight/build-27.1/doom-snippets/+web-angularjs-mode'
 let g:netrw_dirhist_3='/home/tony/Storage/Masters/Suckless/st/st'
 let g:netrw_dirhist_2='/home/tony/.config/fish/prompts/sashimi'
 let g:netrw_dirhist_1='/home/tony/Storage/Masters/Suckless/st/st'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_9='/home/tony/Documents/gatsby/my-gatsby-site/public/static'
 let g:netrw_dirhist_8='/home/tony/Documents/gatsby/my-gatsby-site/src/pages'
 let g:netrw_dirhist_7='/home/tony/Documents/gatsby/my-gatsby-site/src'
 let g:netrw_dirhist_6='/home/tony/.config'
-let g:netrw_dirhist_5='/home/tony/.config/alacritty'
-let g:netrw_dirhist_4='/home/tony/Documents/css/testing'
