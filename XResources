@@ -1,4 +1,4 @@
-#include "/home/tony/.config/themes/doom-one"
+#include "/home/tony/.config/themes/laserwave"
 
 !! Transparency (0-1):
 ! *.alpha: 0.9 
@@ -17,22 +17,22 @@
 ! white     7           15
 
 /* --- colors --- */
-*.color0: COLOR0
-*.color1: COLOR1 
-*.color2: COLOR2
-*.color3: COLOR3
-*.color4: COLOR4
-*.color5: COLOR5
-*.color6: COLOR6
-*.color7: COLOR7
-*.color8: COLOR8
-*.color9: COLOR9
-*.color10: COLOR10
-*.color11: COLOR11
-*.color12: COLOR12
-*.color13: COLOR13
-*.color14: COLOR14
-*.color15: COLOR15
+*.color0: BLACK
+*.color1: RED 
+*.color2: GREEN
+*.color3: YELLOW
+*.color4: BLUE
+*.color5: MAGENTA
+*.color6: CYAN
+*.color7: WHITE
+*.color8: BRBLACK
+*.color9: BRRED
+*.color10: BRGREEN
+*.color11: BRYELLOW
+*.color12: BRBLUE
+*.color13: BRMAGENTA
+*.color14: BRCYAN
+*.color15: BRWHITE
 *.color256: COLOR256
 *.color257: COLOR257
 *.background: BACKGROUND
@@ -44,7 +44,7 @@
 dmenu.font : FONT 
 dmenu.background : BACKGROUND
 dmenu.foreground : FOREGROUND
-dmenu.selbackground : COLOR12
+dmenu.selbackground : BRBLUE
 dmenu.selforeground : BACKGROUND
 
 /* --- Dwm settings --- */
@@ -52,8 +52,8 @@ dwm.normbgcolor: BACKGROUND
 dwm.normbordercolor: BACKGROUND
 dwm.normfgcolor: FOREGROUND
 dwm.selbgcolor: BACKGROUND
-dwm.selbordercolor: COLOR12
-dwm.selfgcolor: COLOR12
+dwm.selbordercolor: BRBLUE
+dwm.selfgcolor: BRYELLOW
 ! dwm.borderpx:
 ! dwm.snap:
 dwm.showbar: 1

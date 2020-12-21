@@ -31,3 +31,7 @@
         :desc "Insert List" "l" #'lorem-ipsum-insert-list
         :desc "Insert Sentence" "s" #'lorem-ipsum-insert-sentences
         :desc "Insert Paragraph" "p" #'lorem-ipsum-insert-paragraphs)))
+
+(map! :leader
+      (:prefix-map ("t" . "toggle")
+       :desc "Toggle Rainbow Mode" "c" #'rainbow-mode))

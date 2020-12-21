@@ -11,7 +11,7 @@ set fish_cursor_replace_one underscore
 set fish_visual block
 
 # turn off vi mode indicator
-function fish_mode_prompt 
+function fish_mode_prompt
 end
 
 # set vi mode as default 
@@ -24,12 +24,23 @@ bind -M insert \ck 'up-or-search'
 bind -M insert \cj 'down-or-search'
 
 # get color from xresources
-set fish_color_selection --background=(get_x_color 3) >/dev/null 2>&1
-set fish_color_quote (get_x_color foreground) >/dev/null 2>&1
-set fish_color_normal (get_x_color color8) >/dev/null 2>&1
-set fish_color_comment (get_x_color color10) --bold >/dev/null 2>&1
-set fish_color_command (get_x_color color12) --bold >/dev/null 2>&1
-set fish_color_param (get_x_color foreground) --bold >/dev/null 2>&1
-set fish_color_autosuggestion (get_x_color color6)  >/dev/null 2>&1
-set fish_color_redirection (get_x_color color10)  >/dev/null 2>&1
-set fish_color_error (get_x_color color9)  >/dev/null 2>&1
+# set fish_color_selection --background=(get_x_color 3)
+set fish_color_normal (set_color -o brwhite)
+set fish_color_command bryellow --bold
+set fish_color_redirection magenta --bold
+set fish_color_error red --bold
+set fish_color_param normal --bold
+set fish_color_comment white --bold
+set fish_color_quote normal
+set fish_color_search_match cyan --bold
+set fish_color_autosuggestion white
+set fish_color_cancel brred --bold
+
+set fish_pager_color_progress brcyan --bold
+set fish_pager_color_prefix yellow --bold
+set fish_pager_color_completion brblue --bold
+set fish_pager_color_description magenta
+set fish_pager_color_selected_background --background=brblue
+set fish_pager_color_selected_prefix black
+set fish_pager_color_selected_completion black
+set fish_pager_color_selected_description black
