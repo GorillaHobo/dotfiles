@@ -1,10 +1,13 @@
-#include "/home/tony/.config/themes/laserwave"
+#include "/home/tony/.config/themes/gruvbox"
 
 !! Transparency (0-1):
 ! *.alpha: 0.9 
 
 !! Set a default font and font size as below:
 #define FONT Cascadia Code:size=10
+#define FONT2 Jost*:size=10
+#define FONT3 Fira Code:size=10
+#define FONT4 Source Code Pro:size=10
 
 ! name      dark        light
 ! black     0           8
@@ -41,10 +44,10 @@
 *.font: FONT
 
 /* --- Dmenu settings --- */
-dmenu.font : FONT 
+dmenu.font : FONT2 
 dmenu.background : BACKGROUND
 dmenu.foreground : FOREGROUND
-dmenu.selbackground : BRBLUE
+dmenu.selbackground : BLUE
 dmenu.selforeground : BACKGROUND
 
 /* --- Dwm settings --- */
@@ -52,15 +55,17 @@ dwm.normbgcolor: BACKGROUND
 dwm.normbordercolor: BACKGROUND
 dwm.normfgcolor: FOREGROUND
 dwm.selbgcolor: BACKGROUND
-dwm.selbordercolor: BRBLUE
+dwm.selbordercolor: BLUE
 dwm.selfgcolor: BRYELLOW
-! dwm.borderpx:
-! dwm.snap:
 dwm.showbar: 1
 dwm.topbar: 1
+dwm.font: FONT
+! dwm.borderpx:
+! dwm.snap:
 ! dwm.resizehints:
 ! dwm.mfact:
 
 /* --- st settings --- */
 st.borderpx: 20
 st.color15: FOREGROUND
+st.font : FONT

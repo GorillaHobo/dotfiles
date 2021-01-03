@@ -59,7 +59,7 @@ c.colors.completion.category.bg = blue
 c.colors.completion.category.border.bottom = blue
 c.colors.completion.category.border.top = blue
 c.colors.completion.category.fg = foreground
-c.colors.completion.even.bg =  lightblack
+c.colors.completion.even.bg =  black
 c.colors.completion.fg = [foreground, yellow, foreground]
 c.colors.completion.item.selected.bg = yellow
 c.colors.completion.item.selected.border.bottom = yellow
@@ -129,8 +129,8 @@ c.colors.statusbar.url.success.https.fg = green
 c.colors.statusbar.url.warn.fg = yellow
 # c.colors.tabs.indicator.system = 'rgb'
 c.colors.tabs.indicator.error = red
-c.colors.tabs.indicator.start = green
-c.colors.tabs.indicator.stop = yellow
+c.colors.tabs.indicator.start = yellow
+c.colors.tabs.indicator.stop = blue
 c.colors.tabs.bar.bg = blue
 c.colors.tabs.even.bg = background
 c.colors.tabs.even.fg = foreground
@@ -588,6 +588,8 @@ c.url.searchengines = {
     'ib' : 'https://www.bing.com/images/search?q={}&form=HDRSC2&first=1&scenario=ImageBasicHover',
     'iy' : 'https://yandex.com/images/search?text={}&from=tabbar',
     'yt' : 'https://www.youtube.com/results?search_query={}',
+    'tk' : 'https://www.tokopedia.com/search?st=product&q={}&navsource=home',
+    'ar' : 'https://archlinux.org/packages/?q={}',
     }
 # c.url.searchengines = {'g' : 'https://www.google.com/search?q={}'}
 
@@ -723,6 +725,7 @@ config.bind('<Ctrl-l>', 'completion-item-focus --history next', mode='command')
 
 config.bind(';V', 'spawn mpv {url}')
 config.bind(';v', 'hint links spawn mpv {hint-url}')
+config.bind(';a', 'hint links spawn st -e mpv {hint-url} --no-video')
 config.bind('ed', 'hint links spawn st -e aria2c --dir=/home/tony/Storage/Downloads \'{hint-url}\'')
 config.bind('et', 'hint links spawn st -e aria2c --dir=/home/tony/Storage/Downloads/Torrents --seed-time=0 \'{hint-url}\'')
 # config.bind('ev', 'hint links spawn st -e youtube-dl --config-location ~/.config/youtube-dl/config \'{hint-url}\'')
@@ -768,6 +771,7 @@ config.bind('<Ctrl-Shift-O>', 'set-cmd-text -s :open -b')
 # config.bind(';r', 'hint --rapid links tab-bg')
 # config.bind(';t', 'hint inputs')
 # config.bind(';y', 'hint links yank')
+config.bind('<Ctrl-Shift-f>', 'hint all tab-bg')
 # config.bind('<Alt-1>', 'tab-focus 1')
 # config.bind('<Alt-2>', 'tab-focus 2')
 # config.bind('<Alt-3>', 'tab-focus 3')

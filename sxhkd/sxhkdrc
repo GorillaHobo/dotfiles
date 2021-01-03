@@ -10,9 +10,12 @@
 super + shift + Return
 	dmenu_run -bw 3 -c -l 20 -i
 
+super + ctrl + Return
+	alacritty
+
 # make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd && notify-send "Sxhkd reloaded."
+super + ctrl + Escape
+	pkill -USR1 -x sxhkd && dunstify -u low -r  "656" "Sxhkd reloaded."
 
 super + ctrl + x
 	reloadx && notify-send -u low "Xresources reloaded"

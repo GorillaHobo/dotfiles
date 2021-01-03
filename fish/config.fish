@@ -25,15 +25,15 @@ bind -M insert \cj 'down-or-search'
 
 # get color from xresources
 # set fish_color_selection --background=(get_x_color 3)
-set fish_color_normal (set_color -o brwhite)
+set fish_color_normal white --bold
 set fish_color_command bryellow --bold
 set fish_color_redirection magenta --bold
 set fish_color_error red --bold
 set fish_color_param normal --bold
 set fish_color_comment white --bold
-set fish_color_quote normal
+set fish_color_quote normal --bold
 set fish_color_search_match cyan --bold
-set fish_color_autosuggestion white
+set fish_color_autosuggestion white --bold
 set fish_color_cancel brred --bold
 
 set fish_pager_color_progress brcyan --bold
@@ -44,3 +44,4 @@ set fish_pager_color_selected_background --background=brblue
 set fish_pager_color_selected_prefix black
 set fish_pager_color_selected_completion black
 set fish_pager_color_selected_description black
+

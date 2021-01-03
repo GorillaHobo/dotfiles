@@ -2,7 +2,14 @@
 # VERSION: 3.0
 SETUVAR SXHKD_SHELL:/usr/bin/bash
 SETUVAR __fish_initialized:3100
-SETUVAR fish_color_autosuggestion:white
+SETUVAR _fish_abbr_aqua:asciiquarium\x20\x7c\x20lolcat
+SETUVAR _fish_abbr_cow:echo\x20samsara\x20\x7c\x20cowsay\x20\x7c\x20lolcat
+SETUVAR _fish_abbr_fish:asciiquarium\x20\x7c\x20lolcat
+SETUVAR _fish_abbr_horse:echo\x20samsara\x20\x7c\x20ponysay
+SETUVAR _fish_abbr_poweroff:sudo\x20poweroff
+SETUVAR _fish_abbr_reboot:sudo\x20reboot
+SETUVAR _fish_abbr_say:echo\x20
+SETUVAR fish_color_autosuggestion:white\x1e\x2d\x2dbold
 SETUVAR fish_color_cancel:brred\x1e\x2d\x2dbold
 SETUVAR fish_color_command:bryellow\x1e\x2d\x2dbold
 SETUVAR fish_color_comment:white\x1e\x2d\x2dbold
@@ -15,10 +22,10 @@ SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_host:normal
 SETUVAR fish_color_host_remote:yellow
 SETUVAR fish_color_match:blue\x1e\x2d\x2dbold
-SETUVAR fish_color_normal:\x1b\x5b1m\x1b\x5b97m
+SETUVAR fish_color_normal:white\x1e\x2d\x2dbold
 SETUVAR fish_color_operator:7cafc2
 SETUVAR fish_color_param:normal\x1e\x2d\x2dbold
-SETUVAR fish_color_quote:normal
+SETUVAR fish_color_quote:normal\x1e\x2d\x2dbold
 SETUVAR fish_color_redirection:magenta\x1e\x2d\x2dbold
 SETUVAR fish_color_search_match:cyan\x1e\x2d\x2dbold
 SETUVAR fish_color_selection:\x2d\x2dbackground\x3d

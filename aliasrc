@@ -13,7 +13,7 @@ alias vterm=" v ~/.config/termite/config"
 alias vvim=" v ~/.config/nvim/init.vim"
 alias valias=" v ~/.config/aliasrc"
 alias vlf=" v ~/.config/lf/lfrc" 
-alias vx=" v ~/.config/Xresources" 
+alias vx=" v ~/.config/XResources" 
 alias vpicom=" v ~/.config/picom/picom.conf"
 alias vxinit=" v ~/.xinitrc"
 
@@ -84,7 +84,7 @@ alias ffmpeg="ffmpeg -hide_banner"
 alias sxiv="~/.local/bin/rifle-sxiv.sh"
 
 # Reload XResources
-alias reloadx="xrdb ~/.config/Xresources"
+alias reloadx="xrdb ~/.config/XResources"
 
 # youtube-dl
 alias yt="youtube-dl"

@@ -2,7 +2,7 @@
       user-mail-address "galihwicaksono90@gmail.com")
 
 (setq doom-font (font-spec :family "Cascadia Code" :size 13 :weight 'regular)
-   doom-variable-pitch-font (font-spec :family "Fira Code" :size 13))
+      doom-variable-pitch-font (font-spec :family "Fira Code" :size 13))
 
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -13,11 +13,11 @@
 
 (setq display-line-numbers-type `relative)
 
-(setq doom-theme 'doom-oceanic-next)
+(setq doom-theme 'doom-gruvbox)
 
 (setq org-directory "~/Documents/org/")
 (setq org-agenda-files "~/Documents/org/todos.org")
-(setq org-log-done 'note)
+(setq org-log-done 'time)
 
 (after! org
   (require 'org-superstar)

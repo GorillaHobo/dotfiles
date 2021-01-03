@@ -20,8 +20,8 @@ endif
 
 " Theme
 syntax enable
-colorscheme default
-" colorscheme OceanicNext
+" colorscheme default
+colorscheme OceanicNext
 
 set number! relativenumber!
 set autoindent

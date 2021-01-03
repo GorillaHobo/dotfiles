@@ -22,7 +22,7 @@ font string. You generally only need these two.
 
 #+begin_src emacs-lisp
 (setq doom-font (font-spec :family "Cascadia Code" :size 13 :weight 'regular)
-   doom-variable-pitch-font (font-spec :family "Fira Code" :size 13))
+      doom-variable-pitch-font (font-spec :family "Fira Code" :size 13))
 
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -31,6 +31,10 @@ font string. You generally only need these two.
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
 #+end_src
+
+#+RESULTS:
+| doom--customize-themes-h-0 | doom--customize-themes-h-12 |
+
 ** Line Number Settings
 This determines the style of line numbers in effect. If set to `nil', line
 numbers are disabled. For relative line numbers, set this to `relative'.
@@ -44,7 +48,7 @@ There are two ways to load a theme. Both assume the theme is installed and
 available. You can either set `doom-theme' or manually load a theme with the `load-theme' function. This is the default:
 
 #+begin_src emacs-lisp
-(setq doom-theme 'doom-oceanic-next)
+(setq doom-theme 'doom-gruvbox)
 #+end_src
 
 * Org-mode Settings
@@ -55,7 +59,7 @@ change `org-directory'. It must be set before org loads!
 #+begin_src emacs-lisp
 (setq org-directory "~/Documents/org/")
 (setq org-agenda-files "~/Documents/org/todos.org")
-(setq org-log-done 'note)
+(setq org-log-done 'time)
 #+end_src
 ** Org-Superstar
 #+begin_src emacs-lisp
@@ -80,7 +84,7 @@ space-i-l to insert lorem ipsum
         :desc "Insert Paragraph" "p" #'lorem-ipsum-insert-paragraphs)))
 #+end_src
 
-** Rainbox Mode
+** Rainbow Mode
 #+begin_src emacs-lisp
 (map! :leader
       (:prefix-map ("t" . "toggle")
