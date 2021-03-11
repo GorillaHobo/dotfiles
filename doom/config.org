@@ -1,6 +1,7 @@
 #+TITLE: Doom emacs config
 #+PROPERTY: header-args :tangle config.el
 
+
 * General Settings
 ** User Identity
 Some functionality uses this to identify you, e.g. GPG configuration, email clients, file templates and snippets.
@@ -21,8 +22,8 @@ They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 font string. You generally only need these two.
 
 #+begin_src emacs-lisp
-(setq doom-font (font-spec :family "Cascadia Code" :size 13 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "Fira Code" :size 13))
+(setq doom-font (font-spec :family "Cascadia Code" :size 13)
+      doom-variable-pitch-font (font-spec :family "Cascadia Code" :size 13))
 
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -31,9 +32,6 @@ font string. You generally only need these two.
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
 #+end_src
-
-#+RESULTS:
-| doom--customize-themes-h-0 | doom--customize-themes-h-12 |
 
 ** Line Number Settings
 This determines the style of line numbers in effect. If set to `nil', line
@@ -48,7 +46,7 @@ There are two ways to load a theme. Both assume the theme is installed and
 available. You can either set `doom-theme' or manually load a theme with the `load-theme' function. This is the default:
 
 #+begin_src emacs-lisp
-(setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'doom-oceanic-next)
 #+end_src
 
 * Org-mode Settings
@@ -67,6 +65,35 @@ change `org-directory'. It must be set before org loads!
   (require 'org-superstar)
   (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1))))
 #+end_src
+# * LaTeX Settings
+# #+begin_src emacs-lisp
+# (after! org
+#   (use-package! ox-extra
+#     :config
+#     (ox-extras-activate '(latex-header-blocks ignore-headlines))))
+# (after! org
+#   ;; Import ox-latex to get org-latex-classes and other funcitonality
+#   ;; for exporting to LaTeX from org
+#   (use-package! ox-latex
+#     :init
+#     ;; code here will run immediately
+#     :config
+#     ;; code here will run after the package is loaded
+#     (setq org-latex-pdf-process
+#           '("pdflatex -interaction nonstopmode -output-directory %o %f"
+#             "bibtex %b"
+#             "pdflatex -interaction nonstopmode -output-directory %o %f"
+#             "pdflatex -interaction nonstopmode -output-directory %o %f"))
+#     (setq org-latex-with-hyperref nil) ;; stop org adding hypersetup{author..} to latex export
+#     ;; (setq org-latex-prefer-user-labels t)
+
+#     ;; deleted unwanted file extensions after latexMK
+#     (setq org-latex-logfiles-extensions
+#           (quote ("lof" "lot" "tex~" "aux" "idx" "log" "out" "toc" "nav" "snm" "vrb" "dvi" "fdb_latexmk" "blg" "brf" "fls" "entoc" "ps" "spl" "bbl" "xmpi" "run.xml" "bcf" "acn" "acr" "alg" "glg" "gls" "ist")))
+
+#     (unless (boundp 'org-latex-classes)
+#       (setq org-latex-classes nil)))
+# #+end_src
 * Major-mode Settings
 - Rjsx on js files
     #+begin_src emacs-lisp
@@ -89,4 +116,15 @@ space-i-l to insert lorem ipsum
 (map! :leader
       (:prefix-map ("t" . "toggle")
        :desc "Toggle Rainbow Mode" "c" #'rainbow-mode))
+#+end_src
+* lsp-mode
+** Go
+#+begin_src emacs-lisp
+(setq lsp-gopls-staticcheck t)
+(setq lsp-eldoc-render-all t)
+(setq lsp-gopls-complete-unimported t)
+#+end_src
+** Typescript
+#+begin_src emacs-lisp
+;; (setq +format-with-lsp nil)
 #+end_src

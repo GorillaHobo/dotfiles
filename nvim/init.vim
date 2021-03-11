@@ -14,14 +14,14 @@ Plug 'shinchu/lightline-gruvbox.vim'
 call plug#end()
 
 " Or if you have Neovim >= 0.1.5
-if (has("termguicolors"))
- set termguicolors
-endif
+" if (has("termguicolors"))
+"  set termguicolors
+" endif
 
 " Theme
 syntax enable
-" colorscheme default
-colorscheme OceanicNext
+colorscheme default
+" colorscheme OceanicNext
 
 set number! relativenumber!
 set autoindent
@@ -48,7 +48,7 @@ nnoremap ]<leader> I<CR><Esc>
 
 " save like doom emacs
 nnoremap <leader>fs :w<CR>
-nnoremap <leader>qq :q!<CR>
+nnoremap <leader>qq ZQ<CR>
 
 " Vim Easy Motion
 nmap gsj <Plug>(easymotion-j)

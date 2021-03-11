@@ -1,0 +1,47 @@
+Looking for git in: git
+Using git 2.30.1 from git
+> git rev-parse --git-dir
+Open repository: /home/tony/Documents/react/learning-hub-frontend
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/272-nr-fitur-certificate-editor refs/remotes/272-nr-fitur-certificate-editor
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/tony/Documents/react/learning-hub-frontend/.git/refs/remotes/origin/production', is most likely packed.
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv HEAD:.log/ti-24195.log
+> git ls-tree -l HEAD -- /home/tony/Documents/react/learning-hub-frontend/.log/ti-24195.log
+> git show --textconv HEAD:.log/ti-24468.log
+> git ls-tree -l HEAD -- /home/tony/Documents/react/learning-hub-frontend/.log/ti-24468.log
+> git show --textconv HEAD:.log/tsserver.log
+> git ls-tree -l HEAD -- /home/tony/Documents/react/learning-hub-frontend/.log/tsserver.log
+> git show --textconv HEAD:.log/ti-22813.log
+> git ls-tree -l HEAD -- /home/tony/Documents/react/learning-hub-frontend/.log/ti-22813.log
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :src/layouts/app/App.css
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/layouts/app/App.css
+> git cat-file -s 11b8498e33c265daa9bc6ae797818a0cc038cc0b
+> git clean -f -q -- /home/tony/Documents/react/learning-hub-frontend/.log/ti-22813.log /home/tony/Documents/react/learning-hub-frontend/.log/ti-24195.log /home/tony/Documents/react/learning-hub-frontend/.log/ti-24332.log /home/tony/Documents/react/learning-hub-frontend/.log/ti-24468.log /home/tony/Documents/react/learning-hub-frontend/.log/tsserver.log
+> git checkout -q
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/272-nr-fitur-certificate-editor refs/remotes/272-nr-fitur-certificate-editor
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/tony/Documents/react/learning-hub-frontend/.git/refs/remotes/origin/production', is most likely packed.
+> git config --get commit.template
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/layouts/app/App.css
+> git cat-file -s 11b8498e33c265daa9bc6ae797818a0cc038cc0b
+> git show --textconv :src/layouts/app/App.css
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/tony/Documents/react/learning-hub-frontend/src/layouts/app/App.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/272-nr-fitur-certificate-editor refs/remotes/272-nr-fitur-certificate-editor
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/tony/Documents/react/learning-hub-frontend/.git/refs/remotes/origin/production', is most likely packed.
+> git config --get commit.template

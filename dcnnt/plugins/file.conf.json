@@ -1,0 +1,36 @@
+{
+  "device": null,
+  "download_directory": "$HOME/Storage/Downloads/dcnnt",
+  "shared_dirs": [
+    {
+      "path": "$HOME/Storage/Music",
+      "glob": "*",
+      "name": "Music",
+      "deep": 100
+    },
+    {
+      "path": "$HOME/Storage/Documents/PDF",
+      "glob": "*",
+      "name": "Documents",
+      "deep": 100
+    },
+    {
+      "path": "$HOME/Storage/Downloads",
+      "glob": "*",
+      "name": "Downloads",
+      "deep": 100
+    },
+    {
+      "path": "$HOME/Storage/Pictures/Screenshots",
+      "glob": "*",
+      "name": "Screenshots",
+      "deep": 100
+    },
+    {
+      "path": "$HOME/Storage/Videos",
+      "glob": "*",
+      "name": "Videos",
+      "deep": 100
+    }
+  ]
+}

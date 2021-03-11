@@ -1,8 +1,8 @@
 (setq user-full-name "Galih Wicaksono"
       user-mail-address "galihwicaksono90@gmail.com")
 
-(setq doom-font (font-spec :family "Cascadia Code" :size 13 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "Fira Code" :size 13))
+(setq doom-font (font-spec :family "Cascadia Code" :size 13)
+      doom-variable-pitch-font (font-spec :family "Cascadia Code" :size 13))
 
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -13,7 +13,7 @@
 
 (setq display-line-numbers-type `relative)
 
-(setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'doom-oceanic-next)
 
 (setq org-directory "~/Documents/org/")
 (setq org-agenda-files "~/Documents/org/todos.org")
@@ -35,3 +35,9 @@
 (map! :leader
       (:prefix-map ("t" . "toggle")
        :desc "Toggle Rainbow Mode" "c" #'rainbow-mode))
+
+(setq lsp-gopls-staticcheck t)
+(setq lsp-eldoc-render-all t)
+(setq lsp-gopls-complete-unimported t)
+
+(setq +format-with-lsp nil)

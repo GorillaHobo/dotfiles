@@ -1,0 +1,9 @@
+{
+  "vim.easymotion": true,
+  "vim.insertModeKeyBindings": [
+    {
+        "before": ["capslock"],
+        "after": ["<Esc>"]
+    }
+  ]
+}

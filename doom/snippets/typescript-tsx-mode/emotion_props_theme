@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: emotion props
+# key: emt
+# --
+\${(props) => props.theme.${1:}};

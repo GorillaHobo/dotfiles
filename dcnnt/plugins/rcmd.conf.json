@@ -1,0 +1,49 @@
+{
+  "device": null,
+  "menu": [
+    {
+      "name": "Volume Control"
+    },
+    {
+      "name": "Volume Up",
+      "method": "shell",
+      "cmd": "$HOME/.local/bin/volume-control increase"
+    },
+    {
+      "name": "Volume Down",
+      "method": "shell",
+      "cmd": "$HOME/.local/bin/volume-control decrease"
+    },
+    {
+      "name": "Brightness"
+    },
+    {
+      "name": "Brightness Up",
+      "method": "shell",
+      "cmd": "$HOME/.local/bin/light-control increase"
+    },
+    {
+      "name": "Brightness Down",
+      "method": "shell",
+      "cmd": "$HOME/.local/bin/light-control decrease"
+    },
+    {
+      "name": "Player"
+    },
+    {
+      "name": "Start/stop",
+      "method": "shell",
+      "cmd": "$HOME/.local/bin/music-control toggle"
+    },
+    {
+      "name": "Next",
+      "method": "shell",
+      "cmd": "$HOME/.local/bin/music-control next-song"
+    },
+    {
+      "name": "Prev",
+      "method": "shell",
+      "cmd": "$HOME/.local/bin/music-control prev-song"
+    }
+  ]
+}

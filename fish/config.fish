@@ -3,7 +3,8 @@ export EDITOR=nvim
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$PATH:$HOME/.config/emacs/bin"
+export GOPATH="$HOME/Documents/go"
 
 set fish_cursor_default block
 set fish_cursor_insert line
@@ -33,7 +34,7 @@ set fish_color_param normal --bold
 set fish_color_comment white --bold
 set fish_color_quote normal --bold
 set fish_color_search_match cyan --bold
-set fish_color_autosuggestion white --bold
+set fish_color_autosuggestion blue --bold
 set fish_color_cancel brred --bold
 
 set fish_pager_color_progress brcyan --bold

@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: React Functional Component
+# key: rfc
+# --
+const ${1:} = () => {
+    return (
+        $2
+    )
+}
+
+export default $1
+
+
+

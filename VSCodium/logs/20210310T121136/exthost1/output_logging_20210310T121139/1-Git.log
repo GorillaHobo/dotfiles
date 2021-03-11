@@ -1,0 +1,114 @@
+Looking for git in: git
+Using git 2.30.1 from git
+> git rev-parse --git-dir
+Open repository: /home/tony/Documents/react/learning-hub-frontend
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/272-nr-fitur-certificate-editor refs/remotes/272-nr-fitur-certificate-editor
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/tony/Documents/react/learning-hub-frontend/.git/refs/remotes/origin/production', is most likely packed.
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show --textconv :src/layouts/app/App.css
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/layouts/app/App.css
+> git cat-file -s 11b8498e33c265daa9bc6ae797818a0cc038cc0b
+> git check-ignore -v -z --stdin
+> git show --textconv :.env.example
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/.env.example
+> git cat-file -s 5d59360a6e1c6d66349dc8e545115b3475510283
+> git check-ignore -v -z --stdin
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/tony/Documents/react/learning-hub-frontend/.env.example
+> git show --textconv :.env
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/.env
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/272-nr-fitur-certificate-editor refs/remotes/272-nr-fitur-certificate-editor
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/tony/Documents/react/learning-hub-frontend/.git/refs/remotes/origin/production', is most likely packed.
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :src/components/Form/SelectModal/Approvers/index.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/components/Form/SelectModal/Approvers/index.js
+> git cat-file -s 6f58343aace42528fe9b48732087ee06b0511ac0
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :src/actions/auth.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/auth.js
+> git cat-file -s ee3a5716458a5ca522019776c81aa1ce5ab02575
+> git show --textconv :src/layouts/app/App.css
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/layouts/app/App.css
+> git cat-file -s 11b8498e33c265daa9bc6ae797818a0cc038cc0b
+> git show --textconv :src/actions/auth.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/auth.js
+> git cat-file -s ee3a5716458a5ca522019776c81aa1ce5ab02575
+> git show --textconv :src/actions/coursestatus.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/coursestatus.js
+> git cat-file -s 5f5724c3ae759d9f5a2f4fd6c5e168966b01e613
+> git show --textconv :src/actions/memberstatus.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/memberstatus.js
+> git cat-file -s 39e5b979b8d941f7707604f8ad50fca3be724379
+> git show --textconv :src/actions/organization.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/organization.js
+> git cat-file -s e72eee6cbaebedaf41adf628fde652956c6d18d1
+> git show --textconv :src/actions/user.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/user.js
+> git cat-file -s 91a2ba2e7a440d394b4d38da32b378affb219578
+> git show --textconv :src/actions/organization.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/organization.js
+> git cat-file -s e72eee6cbaebedaf41adf628fde652956c6d18d1
+> git show --textconv :src/actions/authobject.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/authobject.js
+> git cat-file -s a0bda65da6b273a2bec3634955c16a0673ec242a
+> git show --textconv :src/actions/auth.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/auth.js
+> git cat-file -s ee3a5716458a5ca522019776c81aa1ce5ab02575
+> git show --textconv :src/actions/coursestatus.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/coursestatus.js
+> git cat-file -s 5f5724c3ae759d9f5a2f4fd6c5e168966b01e613
+> git show --textconv :src/actions/globalconfig.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/globalconfig.js
+> git cat-file -s 0e345a645e7a33bed902b02f65827b6963e2e101
+> git show --textconv :src/actions/memberstatus.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/memberstatus.js
+> git cat-file -s 39e5b979b8d941f7707604f8ad50fca3be724379
+> git show --textconv :src/actions/organization.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/actions/organization.js
+> git cat-file -s e72eee6cbaebedaf41adf628fde652956c6d18d1
+> git check-ignore -v -z --stdin
+> git show --textconv :src/config/formLayout.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/config/formLayout.js
+> git cat-file -s f47119c22fde957c43e3e132bed5016c76d91cfe
+> git show --textconv :src/config/handsontable.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/config/handsontable.js
+> git cat-file -s 4353be33b6e81d0e3fdcab90b3fd904022c27a79
+> git show --textconv :src/config/index.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/config/index.js
+> git cat-file -s 575878747a8a53a31486eaeadc19d8ca83dd70df
+> git show --textconv :src/index.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/index.js
+> git cat-file -s a13cc7bf571367d2f48bb368bd3c7a08bd00f318
+> git show --textconv :src/Root.jsx
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/Root.jsx
+> git cat-file -s 838bb1ad8cdd1568618097959128935c9b1dd6c7
+> git show --textconv :src/index.js
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/src/index.js
+> git cat-file -s a13cc7bf571367d2f48bb368bd3c7a08bd00f318
+> git show --textconv :.env
+> git ls-files --stage -- /home/tony/Documents/react/learning-hub-frontend/.env
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/272-nr-fitur-certificate-editor refs/remotes/272-nr-fitur-certificate-editor
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/tony/Documents/react/learning-hub-frontend/.git/refs/remotes/origin/production', is most likely packed.
+> git config --get commit.template

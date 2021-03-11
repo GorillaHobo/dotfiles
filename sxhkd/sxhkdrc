@@ -62,16 +62,16 @@ ctrl + alt + Delete
 # 	vivaldi-stable --incognito
 #
 
-# brave
-# super + v
-# 	brave
-# super + shift + v
-# 	brave --incognito
+brave
+super + v
+	brave
+super + shift + v
+	brave --incognito
 
 super + n
 	qutebrowser
 super + shift + n
-	exec qutebrowser ":open -p"
+	qutebrowser ":open -p"
 
 # emacs
 super + shift + d
@@ -81,7 +81,7 @@ super + d
 
 # file manager
 super + e
-	st -e lf
+	thunar
 
 # volume control suing amixer
 super + alt + Prior

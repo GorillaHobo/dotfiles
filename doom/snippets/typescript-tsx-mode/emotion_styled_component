@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: emotion styled component
+# key: styled
+# --
+import styled from '@emotion/styled'
+$0

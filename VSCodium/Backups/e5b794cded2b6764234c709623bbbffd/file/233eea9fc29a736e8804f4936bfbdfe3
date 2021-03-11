@@ -1,0 +1,54 @@
+file:///home/tony/Documents/react/learning-hub-frontend/src/pages/coming-soon/index.jsx {"mtime":1615426503146,"ctime":1615423558013,"size":1206,"etag":"36ind9j2d17s","orphaned":false}
+import React from 'react';
+import { Layout, Button  } from 'antd' ;
+import { connect } from 'react-redux';
+import '@/assets/styles/global.css'
+import notfoundImg from '@/assets/img/notfound.svg'
+
+const { Content } = Layout;
+
+class Page extends React.Component {
+
+  render() {
+    return (
+      <Content style={styles.content}>
+        <h1 style={styles.title}>Testing</h1>
+        <div style={{backgroundImage:`url(${notfoundImg})`, ...styles.image}}/>
+        <Button type="primary" shape="circle" icon="arrow-left" size="large" style={{marginTop:'10px'}} onClick={()=>this.props.history.goBack()} />
+      </Content>
+    )
+  }
+}
+
+const styles ={
+  content:{
+    margin: '75px', 
+    padding: 20, 
+    minHeight: 280, 
+    overflow:'initial'
+  },
+  title:{
+    fontWeight:200,
+    textAlign:'center',
+  },
+  image:{
+    height:400,
+    marginTop:40,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: '50% 50%',
+    backgroundSize: 'contain',
+  },
+  pre:{
+    fontFamily:'monospace',
+    fontSize:'16pt',
+    borderRadius:5,
+    backgroundColor:'#ddd'
+  }
+}
+const mapStateToProps = (state) => {
+    return {
+    message: state.auth.message
+  }
+}
+
+export default connect(mapStateToProps)(Page);

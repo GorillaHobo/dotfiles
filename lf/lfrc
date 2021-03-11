@@ -102,7 +102,7 @@ map o &mimeopen $f
 map O $mimeopen --ask $f
 map <c-z> unarchive
 map <c-n> create
-# map x clear
+map x clear
 
 # Renaming filename
 map A rename # at the very end

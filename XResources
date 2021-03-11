@@ -4,10 +4,12 @@
 ! *.alpha: 0.9 
 
 !! Set a default font and font size as below:
-#define FONT Cascadia Code:size=10
-#define FONT2 Jost*:size=10
-#define FONT3 Fira Code:size=10
-#define FONT4 Source Code Pro:size=10
+#define CODE Cascadia Code PL:size=10
+#define SERIF Roboto Slab Medium:size=10
+#define SANS Open Sans:size=10
+! #define FONT3 Fira Code:size=10
+! #define FONT4 Source Code Pro:size=10
+! #define FONT5 JetBrains Mono: size=10
 
 ! name      dark        light
 ! black     0           8
@@ -41,10 +43,10 @@
 *.background: BACKGROUND
 *.foreground: FOREGROUND
 
-*.font: FONT
+*.font: CODE
 
 /* --- Dmenu settings --- */
-dmenu.font : FONT2 
+dmenu.font : SANS
 dmenu.background : BACKGROUND
 dmenu.foreground : FOREGROUND
 dmenu.selbackground : BLUE
@@ -59,7 +61,7 @@ dwm.selbordercolor: BLUE
 dwm.selfgcolor: BRYELLOW
 dwm.showbar: 1
 dwm.topbar: 1
-dwm.font: FONT
+dwm.font: SANS
 ! dwm.borderpx:
 ! dwm.snap:
 ! dwm.resizehints:
@@ -68,4 +70,4 @@ dwm.font: FONT
 /* --- st settings --- */
 st.borderpx: 20
 st.color15: FOREGROUND
-st.font : FONT
+st.font : CODE
