@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: import-variables-scss
-# key: impvar
-# --
-
-@import 'variables.scss';
-
-$0

@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: style jsx
-# key: sjx
-# --
-<style jsx>
-{\`
-    $1
-\`}
-</style>

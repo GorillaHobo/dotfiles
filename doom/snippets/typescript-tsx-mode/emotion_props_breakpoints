@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: emotion breakpoints
-# key: emb
-# --
-
-@media \${(props) => props.theme.breakpoints.${1:}} {
-    ${2:}
-}

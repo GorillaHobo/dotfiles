@@ -15,7 +15,9 @@ x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop
 x-scheme-handler/about=vivaldi-stable.desktop
 x-scheme-handler/unknown=vivaldi-stable.desktop
 x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/postman=Postman.desktop
 
 [Added Associations]
 inode/directory=pcmanfm.desktop;
 application/zip=lf.desktop;
+text/plain=libreoffice-writer.desktop;

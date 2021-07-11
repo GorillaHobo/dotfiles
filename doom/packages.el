@@ -48,8 +48,3 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
-
-(package! lorem-ipsum)
-(package! org-superstar)
-(package! arduino-mode)
-(package! arduino-cli-mode)

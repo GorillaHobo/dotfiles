@@ -131,7 +131,7 @@ shift + ctrl + Print
 	maim_screenshot 3
 # get rgb using maim
 shift + ctrl + alt + Print
-	get_rgb
+	maim_screenshot 4
 
 super + ctrl + shift + t
 	change_theme

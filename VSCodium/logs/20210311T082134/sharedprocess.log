@@ -1,7 +1,0 @@
-[2021-03-11 08:22:18.047] [sharedprocess] [info] Starting to clean up unused language packs.
-[2021-03-11 08:35:24.754] [sharedprocess] [info] Installing extension: esbenp.prettier-vscode
-[2021-03-11 08:35:43.598] [sharedprocess] [info] Downloaded extension: esbenp.prettier-vscode undefined
-[2021-03-11 08:35:44.231] [sharedprocess] [info] Extracted extension to /home/tony/.vscode-oss/extensions/.esbenp.prettier-vscode-5.9.2: esbenp.prettier-vscode
-[2021-03-11 08:35:44.232] [sharedprocess] [info] Renamed to /home/tony/.vscode-oss/extensions/esbenp.prettier-vscode-5.9.2
-[2021-03-11 08:35:44.235] [sharedprocess] [info] Installation completed. esbenp.prettier-vscode
-[2021-03-11 08:35:44.246] [sharedprocess] [info] Extensions installed successfully: esbenp.prettier-vscode

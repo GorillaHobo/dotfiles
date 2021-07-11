@@ -1,2 +1,3 @@
 # save directory
--o ~/Storage/Videos/youtube-dl/%(title)s.%(ext)s
+-o ~/youtube-dl/%(title)s.%(ext)s
+# -o ~/Storage/Videos/youtube-dl/%(title)s.%(ext)s

@@ -142,7 +142,7 @@ c.colors.statusbar.command.fg = foreground
 c.colors.statusbar.command.private.bg = background
 c.colors.statusbar.command.private.fg = foreground
 c.colors.statusbar.insert.bg = blue
-c.colors.statusbar.insert.fg = foreground
+c.colors.statusbar.insert.fg = white
 c.colors.statusbar.normal.bg = background
 c.colors.statusbar.normal.fg = foreground
 c.colors.statusbar.passthrough.bg = green
@@ -191,7 +191,7 @@ c.completion.open_categories = ["quickmarks", "bookmarks", "history"]
 #+end_src
 * Dowloads
 #+begin_src python
-c.downloads.location.directory = "/home/tony/Storage/Downloads/"
+c.downloads.location.directory = "/home/tony/Downloads/"
 # c.downloads.location.suggestion = "/home/tony/Storage/Downloads/"
 c.downloads.position = "bottom"
 # c.editor.command = ["nvim", "-f", "{file}", "-c", "normal {line}G{column0}l"]
@@ -322,7 +322,7 @@ c.tabs.title.format = '{audio}{index}: {current_title} {private}'
 # c.tabs.pinned.shrink = True
 # c.tabs.position = 'top'
 # c.tabs.select_on_remove = 'next'
-# c.tabs.show = 'always'
+c.tabs.show = 'switching'
 # c.tabs.show_switching_delay = 800
 # c.tabs.tabs_are_windows = False
 # c.tabs.title.alignment = 'left'
@@ -441,6 +441,15 @@ config.bind("<Ctrl-l>", "fake-key <Shift-End><Delete>", "insert")
 #+begin_src python
 config.bind("er", "config-source")
 #+end_src
+** Devtools shortcut
+#+begin_src python
+config.unbind("wl")
+config.bind("wlj", "devtools bottom")
+config.bind("wll", "devtools right")
+config.bind("wlw", "devtools window")
+#+end_src
+
+#+RESULTS:
 
 * Command Aliases
 #+begin_src python

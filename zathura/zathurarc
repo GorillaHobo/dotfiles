@@ -11,6 +11,6 @@ map R rotate
 map K zoom in
 map J zoom out
 map i recolor
-map p print
+map P print
 unmap " "
 set selection-clipboard clipboard

@@ -32,7 +32,7 @@ alias nmtp= "nnn -C~/.mtp/"
 # lf aliases 
 alias scripts="lfcd ~/.local/bin"
 alias lf="lf"
-alias lfdown="lf ~/Storage/Downloads/"
+alias lfdown="lf ~/Downloads"
 alias lfc="lf ~/.config/"
 alias lfs="lf ~/Storage/"
 alias lftor="lf ~/Storage/Downloads/Torrents/"

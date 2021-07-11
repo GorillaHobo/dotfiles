@@ -120,7 +120,7 @@ c.colors.statusbar.command.fg = foreground
 c.colors.statusbar.command.private.bg = background
 c.colors.statusbar.command.private.fg = foreground
 c.colors.statusbar.insert.bg = blue
-c.colors.statusbar.insert.fg = foreground
+c.colors.statusbar.insert.fg = white
 c.colors.statusbar.normal.bg = background
 c.colors.statusbar.normal.fg = foreground
 c.colors.statusbar.passthrough.bg = green
@@ -164,7 +164,7 @@ c.prompt.radius = 0
 config.load_autoconfig(True)
 c.completion.open_categories = ["quickmarks", "bookmarks", "history"]
 
-c.downloads.location.directory = "/home/tony/Storage/Downloads/"
+c.downloads.location.directory = "/home/tony/Downloads/"
 # c.downloads.location.suggestion = "/home/tony/Storage/Downloads/"
 c.downloads.position = "bottom"
 # c.editor.command = ["nvim", "-f", "{file}", "-c", "normal {line}G{column0}l"]
@@ -254,5 +254,10 @@ config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
 config.bind("<Ctrl-l>", "fake-key <Shift-End><Delete>", "insert")
 
 config.bind("er", "config-source")
+
+config.unbind("wl")
+config.bind("wlj", "devtools bottom")
+config.bind("wll", "devtools right")
+config.bind("wlw", "devtools window")
 
 # c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}

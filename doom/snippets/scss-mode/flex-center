@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: flex-center
-# key: center
-# --
-
-display: flex;
-justify-content: center;
-align-items: center;
-$0
