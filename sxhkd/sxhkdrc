@@ -8,7 +8,11 @@
 
 # program launcher
 super + shift + Return
-	dmenu_run -bw 3 -c -l 20 -i
+	rofi -show run
+	# dmenu_run -bw 3 -c -l 20 -i
+
+super + o
+	rofi -show run
 
 super + ctrl + Return
 	alacritty
@@ -84,19 +88,28 @@ super + e
 	thunar
 
 # volume control suing amixer
-super + alt + Prior
+
+# super + bracketright
+# 	volume-control "increase"
+# super + bracketleft
+# 	volume-control "decrease"
+
+XF86MonBrightnessUp
+	light-control "increase"
+XF86MonBrightnessDown
+	light-control "decrease"
+
+# super + ctrl + Prior 
+# 	light-control "increase"
+# super + ctrl + Next
+# 	light-control "decrease"
+
+XF86AudioRaiseVolume
 	volume-control "increase"
-super + alt + Next
+XF86AudioLowerVolume
 	volume-control "decrease"
 
-super + ctrl + Prior 
-	light-control "increase"
-super + ctrl + Next
-	light-control "decrease"
-# XF86AudioRaiseVolume
-	# amixer set Master 10%+
-# XF86AudioLowerVolume
-	# amixer set Master 10%-
+#
 # XF86BrightnessUp
 	# amixer set Master 10%-
 
@@ -121,13 +134,13 @@ XF86AudioPrev
 
 # take screenshot at ~/Storage/Pictures/Screenshots/
 # take desktop screenshot
-Print
+super + s
 	maim_screenshot 1
 # take Window screenshot
-shift + Print
+super + ctrl + s
 	maim_screenshot 2
 # take Selected screenshot
-shift + ctrl + Print
+super + ctrl + shift + s
 	maim_screenshot 3
 # get rgb using maim
 shift + ctrl + alt + Print

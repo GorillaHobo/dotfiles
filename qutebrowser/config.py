@@ -221,6 +221,8 @@ config.bind('<Ctrl-j>', 'completion-item-focus next', mode='command')
 config.bind('<Ctrl-h>', 'completion-item-focus --history prev', mode='command')
 config.bind('<Ctrl-l>', 'completion-item-focus --history next', mode='command')
 
+config.bind('<Ctrl-Escape>', 'mode-leave', mode='passthrough')
+
 config.bind(";V", "spawn mpv {url}")
 config.bind(";v", "hint links spawn mpv {hint-url}")
 config.bind(";a", "hint links spawn st -e mpv {hint-url} --no-video")

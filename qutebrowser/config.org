@@ -397,6 +397,9 @@ config.bind('<Ctrl-l>', 'completion-item-focus --history next', mode='command')
 ** Hint mode
 ** Insert mode
 ** Passthrough mode
+#+begin_src python
+config.bind('<Ctrl-Escape>', 'mode-leave', mode='passthrough')
+#+end_src
 ** Prompt mode
 ** Register mode
 ** Yes No Mode
