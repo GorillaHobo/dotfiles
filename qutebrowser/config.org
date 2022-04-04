@@ -210,7 +210,7 @@ c.downloads.position = "bottom"
 #+begin_src python
 c.fonts.default_family = ["Open Sans"]
 c.fonts.default_size = "10pt"
-c.fonts.hints = "bold 13px default_family"
+c.fonts.hints = "bold 15px IBM Plex Mono"
 #+end_src
 # c.fonts.completion.category = 'bold default_size default_family'
 # c.fonts.completion.entry = 'default_size default_family'
@@ -237,6 +237,9 @@ c.fonts.hints = "bold 13px default_family"
 # c.fonts.web.size.minimum_logical = 6
 
 * Hints
+#+begin_src python
+c.hints.chars = 'arstneio'
+#+end_src
 # c.hints.auto_follow = 'unique-match'
 # c.hints.auto_follow_timeout = 0
 # c.hints.border = '1px solid #E3BE23'
@@ -299,7 +302,7 @@ c.tabs.title.format = '{audio}{index}: {current_title} {private}'
 
 # c.statusbar.padding = {'top': 1, 'bottom': 1, 'left': 0, 'right': 0}
 # c.statusbar.position = 'bottom'
-# c.statusbar.show = 'always'
+c.statusbar.show = 'never'
 # c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress']
 # c.tabs.background = True
 # c.tabs.close_mouse_button = 'middle'
@@ -322,7 +325,7 @@ c.tabs.title.format = '{audio}{index}: {current_title} {private}'
 # c.tabs.pinned.shrink = True
 # c.tabs.position = 'top'
 # c.tabs.select_on_remove = 'next'
-c.tabs.show = 'switching'
+c.tabs.show = 'never'
 # c.tabs.show_switching_delay = 800
 # c.tabs.tabs_are_windows = False
 # c.tabs.title.alignment = 'left'

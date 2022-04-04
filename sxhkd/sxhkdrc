@@ -1,18 +1,15 @@
-#
 # wm independent hotkeys
-#
 
 # terminal launcher
 # super + Return
-	# st
+# 	st
 
 # program launcher
 super + shift + Return
-	rofi -show run
-	# dmenu_run -bw 3 -c -l 20 -i
+	dmenu_run -bw 3 -c -l 20 -i
 
 super + o
-	rofi -show run
+	dmenu_run -bw 3 -c -l 20 -i
 
 super + ctrl + Return
 	alacritty
@@ -44,10 +41,8 @@ super + F10
 super + ctrl + F10
 	killall -q mpd && killall -q ncmpcpp && notify-send "MPD" "Closed"
 super + F11
-	alarm &
-super + F12
 	usb_mount
-super + ctrl + F12
+super + F12
 	usb_unmount
 XF86Display
 	monitor_dmenu
@@ -78,14 +73,14 @@ super + shift + n
 	qutebrowser ":open -p"
 
 # emacs
-super + shift + d
+super + ctrl + d
 	emacs
 super + d
 	emacsclient -c -n
 
 # file manager
 super + e
-	thunar
+	nautilus
 
 # volume control suing amixer
 
@@ -144,7 +139,7 @@ super + ctrl + shift + s
 	maim_screenshot 3
 # get rgb using maim
 shift + ctrl + alt + Print
-	maim_screenshot 4
+
 
 super + ctrl + shift + t
 	change_theme

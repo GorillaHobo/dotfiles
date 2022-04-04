@@ -63,8 +63,8 @@ alias factorio="sh ~/Storage/Games/Factorio/Factorio/run.sh"
 alias slay="sh ~/Storage/Games/Slay\ the\ Spire/run.sh"
 
 # change random wallpaper
-alias wallpaper="sxiv ~/Storage/Downloads/Wallpapers/*"
-alias wallpaper_random="feh --bg-fill --randomize ~/Storage/Downloads/Wallpapers/"
+alias wallpaper="sxiv ~/Pictures/Wallpapers/*"
+alias wallpaper_random="feh --bg-fill --randomize ~/Pictures/Wallpapers/"
 
 # Colorize commands if possible
 alias ls="ls -hN --color=auto --group-directories-first"
@@ -88,5 +88,3 @@ alias reloadx="xrdb ~/.config/XResources"
 
 # youtube-dl
 alias yt="youtube-dl"
-
-

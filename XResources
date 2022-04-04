@@ -5,10 +5,11 @@
 
 !! Set a default font and font size as below:
 #define CODE Cascadia Code PL:size=10
+! #define CODE IBM Plex Mono:size=10
 #define SERIF Roboto Slab Medium:size=10
 #define SANS Open Sans:size=10
-! #define FONT3 Fira Code:size=10
-! #define FONT4 Source Code Pro:size=10
+#define FONT3 scientifica:size=10
+! #define CODE Source Code Pro:size=11W
 ! #define FONT5 JetBrains Mono: size=10
 
 ! name      dark        light
@@ -46,7 +47,7 @@
 *.font: CODE
 
 /* --- Dmenu settings --- */
-dmenu.font : SANS
+dmenu.font : CODE
 dmenu.background : BACKGROUND
 dmenu.foreground : FOREGROUND
 dmenu.selbackground : BLUE
@@ -61,7 +62,7 @@ dwm.selbordercolor: BLUE
 dwm.selfgcolor: BRYELLOW
 dwm.showbar: 1
 dwm.topbar: 1
-dwm.font: SANS
+dwm.font: FONT3
 ! dwm.borderpx:
 ! dwm.snap:
 ! dwm.resizehints:

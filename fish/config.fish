@@ -4,8 +4,11 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.config/emacs/bin"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export GOPATH="$HOME/Documents/go"
+export NVM_DIR="$HOME/.config/nvm"
 
+set -gx NVM_DIR $HOME/.config/nvm
 set fish_cursor_default block
 set fish_cursor_insert line
 set fish_cursor_replace_one underscore

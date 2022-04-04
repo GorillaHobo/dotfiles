@@ -174,7 +174,9 @@ c.downloads.position = "bottom"
 
 c.fonts.default_family = ["Open Sans"]
 c.fonts.default_size = "10pt"
-c.fonts.hints = "bold 13px default_family"
+c.fonts.hints = "bold 15px IBM Plex Mono"
+
+c.hints.chars = 'arstneio'
 
 c.keyhint.delay = 500
 c.keyhint.radius = 0
@@ -263,3 +265,7 @@ config.bind("wll", "devtools right")
 config.bind("wlw", "devtools window")
 
 # c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}
+#
+
+# c.tabs.show="switching"
+# c.statusbar.show="in-mode"
