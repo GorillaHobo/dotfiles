@@ -7,6 +7,11 @@ export PATH="$PATH:$HOME/.config/emacs/bin"
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export GOPATH="$HOME/Documents/go"
 export NVM_DIR="$HOME/.config/nvm"
+export ANDROID_HOME="/opt/android-sdk"
+export MsBuildSDKsPath="/usr/share/dotnet/sdk/6.*/Sdks"
+# set PATH $PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+# set PATH $PATH:$ANDROID_HOME/tools/bin export 
+# set PATH $PATH:$ANDROID_HOME/platform-tools
 
 set -gx NVM_DIR $HOME/.config/nvm
 set fish_cursor_default block

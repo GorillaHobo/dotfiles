@@ -1,5 +1,5 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-
+;;
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
@@ -21,15 +21,15 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq doom-font (font-spec :family "Cascadia Code" :size 13 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "Cascadia Code" :size 13))
+(setq doom-font (font-spec :family "Cascadia Code" :size 12 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "Cascadia Code" :size 12))
 ;; (setq doom-font (font-spec :family "IBM Plex Mono" :size 14)
 ;;       doom-variable-pitch-font (font-spec :family "IBM Plex Mono" :size 14))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'doom-gruvbox )
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -65,10 +65,38 @@
 ;; (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.svelte\\'" . web-mode))
 ;;
-(use-package! lsp-tailwindcss)
+;; (use-package! lsp-tailwindcss)
 ;;
 ;; Add latex environments to list of environments.
 (add-hook 'LaTeX-mode-hook 'add-my-latex-environments)
 (defun add-my-latex-environments ()
   (LaTeX-add-environments
    '("tikzpicture" LaTeX-env-label)))
+
+(map! :leader
+      :desc "Format buffer using LSP"
+      "c p" #'lsp-format-buffer)
+
+
+(setq lsp-csharp-server-path "/usr/bin/omnisharp")
+(setq lsp-csharp-omnisharp-roslyn-download-url "https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v1.39.0/omnisharp-linux-x64-net6.0.zip")
+
+;; ;; ts-ls json errror fix
+;; (use-package lsp-mode
+;;   :defer t
+;;   :config
+;;   (advice-add 'json-parse-string :around
+;;               (lambda (orig string &rest rest)
+;;                 (apply orig (s-replace "\\u0000" "" string)
+;;                        rest)))
+;;   (advice-add 'json-parse-buffer :around
+;;               (lambda (orig &rest rest)
+;;                 (while (re-search-forward "\\u0000" nil t)
+;;                   (replace-match ""))
+;;                 (apply orig rest))))
+
+(advice-add 'json-parse-buffer :around
+        (lambda (orig &rest rest)
+        (while (re-search-forward "\\u0000" nil t)
+        (replace-match ""))
+        (apply orig rest)))

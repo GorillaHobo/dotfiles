@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR SXHKD_SHELL:/usr/bin/bash
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_aqua:asciiquarium
 SETUVAR _fish_abbr_cow:echo\x20samsara\x20\x7c\x20cowsay\x20\x7c\x20lolcat
 SETUVAR _fish_abbr_docs:lf\x20/home/tony/Storage/Documents
@@ -45,3 +45,4 @@ SETUVAR fish_pager_color_completion:brblue\x1e\x2d\x2dbold
 SETUVAR fish_pager_color_description:magenta
 SETUVAR fish_pager_color_prefix:yellow\x1e\x2d\x2dbold
 SETUVAR fish_pager_color_progress:brcyan\x1e\x2d\x2dbold
+SETUVAR fish_user_paths:/home/tony/\x2edotnet/tools

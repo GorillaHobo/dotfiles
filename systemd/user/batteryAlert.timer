@@ -1,0 +1,11 @@
+# batteryAlert.service
+[Unit]
+Description= Check for low battery for every 5 minutes
+
+[Timer]
+OnBootSec=0min
+OnCalendar=*:0/1
+Unit=batteryAlert.service
+
+[Install]
+WantedBy=timers.target

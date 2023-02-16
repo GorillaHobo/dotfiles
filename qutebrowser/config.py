@@ -92,6 +92,7 @@ c.colors.downloads.stop.bg = blue
 c.colors.downloads.stop.fg = background
 c.colors.downloads.system.bg = 'none'
 c.colors.downloads.system.fg = 'none'
+
 c.colors.hints.bg = lightyellow
 c.colors.hints.fg = background
 c.colors.hints.match.fg = foreground
@@ -201,6 +202,8 @@ c.url.searchengines = {
 config.bind(';z', 'hint images download')
 config.bind('<Ctrl-Shift-h>', 'tab-move -')
 config.bind('<Ctrl-Shift-l>', 'tab-move +')
+config.bind('<Ctrl-Shift-n>', 'tab-move -')
+config.bind('<Ctrl-Shift-o>', 'tab-move +')
 config.bind('j', 'scroll-px 0 75')
 config.bind('k', 'scroll-px 0 -75')
 config.bind('h', 'scroll-px -75 0')
@@ -209,14 +212,19 @@ config.bind('<Ctrl-R>', ':config-source')
 config.bind('<Ctrl-U>', 'undo')
 config.unbind('D')
 config.bind('<Ctrl-Shift-q>', 'tab-close -o')
-config.bind('<Ctrl-j>', 'back')
-config.bind('<Ctrl-h>', 'tab-prev')
-config.bind('<Ctrl-k>', 'forward')
 config.bind('u', 'scroll-page 0 -0.5')
 config.bind('d', 'scroll-page 0 0.5')
 config.bind('<Ctrl-q>', 'tab-close')
+config.bind('<Ctrl-j>', 'back')
+config.bind('<Ctrl-k>', 'forward')
+config.bind('<Ctrl-h>', 'tab-prev')
 config.bind('<Ctrl-l>', 'tab-next')
-config.bind('<Ctrl-Shift-O>', 'set-cmd-text -s :open -b')
+# config.bind('<Ctrl-Shift-O>', 'set-cmd-text -s :open -b')
+
+config.bind('<Ctrl-e>', 'back')
+config.bind('<Ctrl-i>', 'forward')
+config.bind('<Ctrl-n>', 'tab-prev')
+config.bind('<Ctrl-o>', 'tab-next')
 
 config.bind('<Ctrl-k>', 'completion-item-focus prev', mode='command')
 config.bind('<Ctrl-j>', 'completion-item-focus next', mode='command')
@@ -264,7 +272,7 @@ config.bind("wlj", "devtools bottom")
 config.bind("wll", "devtools right")
 config.bind("wlw", "devtools window")
 
-# c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}
+c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save', 'wqa': 'quit --save'}
 #
 
 # c.tabs.show="switching"

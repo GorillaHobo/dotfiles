@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: Stateless Widget
+# uuid: stw
+# key: stw
+# condition: t
+# --
+
+class $1 extends StatelessWidget {
+  const $1({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    $0
+  }
+}

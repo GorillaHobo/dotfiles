@@ -1,13 +1,13 @@
-#include "/home/tony/.config/themes/gruvbox"
+#include "/home/tony/.config/themes/gruvbox-material"
 
 !! Transparency (0-1):
 ! *.alpha: 0.9 
 
 !! Set a default font and font size as below:
-#define CODE Cascadia Code PL:size=10
-! #define CODE IBM Plex Mono:size=10
-#define SERIF Roboto Slab Medium:size=10
-#define SANS Open Sans:size=10
+#define CODE Cascadia Code PL:size=9
+! #define CODE IBM Plex Mono:size=8
+#define SERIF Roboto Slab Medium:size=9
+#define SANS Open Sans:size=9
 #define FONT3 scientifica:size=10
 ! #define CODE Source Code Pro:size=11W
 ! #define FONT5 JetBrains Mono: size=10
@@ -18,7 +18,7 @@
 ! green     2           10
 ! yellow    3           11
 ! blue      4           12
-! purple    5           13
+! purple   4           13
 ! cyan      6           14
 ! white     7           15
 
