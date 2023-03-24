@@ -4,11 +4,15 @@
 ! *.alpha: 0.9 
 
 !! Set a default font and font size as below:
-#define CODE Cascadia Code PL:size=9
-! #define CODE IBM Plex Mono:size=8
-#define SERIF Roboto Slab Medium:size=9
-#define SANS Open Sans:size=9
-#define FONT3 scientifica:size=10
+! #define CODE JetBrains Mono:size=9
+#define CODE VictorMono Nerd Font:size=9
+! #define CODE Fira Code:size=10
+! #define CODE Cascadia Code PL:size=9
+! #define CODE IBM Plex Mono:size=9
+! #define SERIF Roboto Slab Medium:size=9
+! #define SANS Open Sans:size=9
+#define SANS IBM Plex Sans:size=9
+#define FONT3 scientifica:size=8
 ! #define CODE Source Code Pro:size=11W
 ! #define FONT5 JetBrains Mono: size=10
 
@@ -18,7 +22,7 @@
 ! green     2           10
 ! yellow    3           11
 ! blue      4           12
-! purple   4           13
+! purple    4           13
 ! cyan      6           14
 ! white     7           15
 
@@ -44,7 +48,7 @@
 *.background: BACKGROUND
 *.foreground: FOREGROUND
 
-*.font: CODE
+*.font: SANS
 
 /* --- Dmenu settings --- */
 dmenu.font : CODE
@@ -62,7 +66,7 @@ dwm.selbordercolor: BLUE
 dwm.selfgcolor: BRYELLOW
 dwm.showbar: 1
 dwm.topbar: 1
-dwm.font: FONT3
+dwm.font: SANS
 ! dwm.borderpx:
 ! dwm.snap:
 ! dwm.resizehints:

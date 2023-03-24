@@ -21,8 +21,10 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq doom-font (font-spec :family "Cascadia Code" :size 12 :weight 'semi-light)
+(setq doom-font (font-spec :family "VictorMono Nerd Font" :size 12 :weight 'semi-light)
       doom-variable-pitch-font (font-spec :family "Cascadia Code" :size 12))
+;; (setq doom-font (font-spec :family "Cascadia Code" :size 12 :weight 'semi-light)
+;;       doom-variable-pitch-font (font-spec :family "Cascadia Code" :size 12))
 ;; (setq doom-font (font-spec :family "IBM Plex Mono" :size 14)
 ;;       doom-variable-pitch-font (font-spec :family "IBM Plex Mono" :size 14))
 

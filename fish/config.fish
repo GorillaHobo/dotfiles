@@ -54,3 +54,7 @@ set fish_pager_color_selected_prefix black
 set fish_pager_color_selected_completion black
 set fish_pager_color_selected_description black
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

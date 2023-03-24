@@ -1,5 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export ANDROID_SDK_ROOT:/opt/android\x2dsdk
+SETUVAR --export JAVA_HOME:/usr/lib/jvm/java\x2d10\x2dopenjdk
+SETUVAR --export JAVA_OPTS:\x2dXX\x3a\x2bIgnoreUnrecognizedVMOptions\x20\x2d\x2dadd\x2dmodules\x20java\x2ese\x2eee
 SETUVAR SXHKD_SHELL:/usr/bin/bash
 SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_aqua:asciiquarium
@@ -45,4 +48,4 @@ SETUVAR fish_pager_color_completion:brblue\x1e\x2d\x2dbold
 SETUVAR fish_pager_color_description:magenta
 SETUVAR fish_pager_color_prefix:yellow\x1e\x2d\x2dbold
 SETUVAR fish_pager_color_progress:brcyan\x1e\x2d\x2dbold
-SETUVAR fish_user_paths:/home/tony/\x2edotnet/tools
+SETUVAR fish_user_paths:/home/tony/\x2edotnet/tools\x1e/opt/flutter\x1e/opt/flutter/bin
