@@ -48,8 +48,12 @@ XF86Display
 	monitor_dmenu
 
 # launch HTOP
+# ctrl + alt + Delete
+# 	st -c "gotop" -e gotop -l minimal
+# ctrl + alt + Delete
+# 	st -c "btop" -e btop -p 4
 ctrl + alt + Delete
-	st -c "gotop" -e gotop -l minimal
+	st -c "btop" -e btm --basic
 #
 # launch applications
 #
@@ -69,7 +73,7 @@ ctrl + alt + Delete
 #
 
 super + v
-	st -c "astronvim" -e nvim
+	st -e nvim
 
 
 super + g

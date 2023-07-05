@@ -1,8 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export ANDROID_SDK_ROOT:/opt/android\x2dsdk
-SETUVAR --export JAVA_HOME:/usr/lib/jvm/java\x2d10\x2dopenjdk
-SETUVAR --export JAVA_OPTS:\x2dXX\x3a\x2bIgnoreUnrecognizedVMOptions\x20\x2d\x2dadd\x2dmodules\x20java\x2ese\x2eee
+SETUVAR --export JAVA_HOME:\x1d
 SETUVAR SXHKD_SHELL:/usr/bin/bash
 SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_aqua:asciiquarium
@@ -14,7 +13,6 @@ SETUVAR _fish_abbr_lfm:lf\x20\x7e/Storage/Masters
 SETUVAR _fish_abbr_pg:ping\x201\x2e1\x2e1\x2e1
 SETUVAR _fish_abbr_say:echo\x20
 SETUVAR _fish_abbr_train:sl\x20\x7c\x20lolcat
-SETUVAR _fish_abbr_tree:cbonsai\x20\x2d\x2dlive\x20\x7c\x20lolcat
 SETUVAR _fisher_FabioAntunes_2F_fish_2D_nvm_files:/home/tony/\x2econfig/fish/functions/__nvm_run\x2efish\x1e/home/tony/\x2econfig/fish/functions/node\x2efish\x1e/home/tony/\x2econfig/fish/functions/npm\x2efish\x1e/home/tony/\x2econfig/fish/functions/npx\x2efish\x1e/home/tony/\x2econfig/fish/functions/nvm\x2efish\x1e/home/tony/\x2econfig/fish/functions/nvm_alias_command\x2efish\x1e/home/tony/\x2econfig/fish/functions/nvm_alias_function\x2efish\x1e/home/tony/\x2econfig/fish/functions/yarn\x2efish\x1e/home/tony/\x2econfig/fish/completions/nvm\x2efish
 SETUVAR _fisher_edc_2F_bass_files:/home/tony/\x2econfig/fish/functions/__bass\x2epy\x1e/home/tony/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/tony/\x2econfig/fish/functions/fisher\x2efish\x1e/home/tony/\x2econfig/fish/completions/fisher\x2efish
@@ -48,4 +46,4 @@ SETUVAR fish_pager_color_completion:brblue\x1e\x2d\x2dbold
 SETUVAR fish_pager_color_description:magenta
 SETUVAR fish_pager_color_prefix:yellow\x1e\x2d\x2dbold
 SETUVAR fish_pager_color_progress:brcyan\x1e\x2d\x2dbold
-SETUVAR fish_user_paths:/home/tony/\x2edotnet/tools\x1e/opt/flutter\x1e/opt/flutter/bin
+SETUVAR fish_user_paths:/home/tony/Documents/go/bin\x1e/home/tony/\x2edotnet/tools\x1e/opt/flutter\x1e/opt/flutter/bin\x1e/usr/sbin\x1e/opt/android\x2dsdk/cmdline\x2dtools/latest/bin

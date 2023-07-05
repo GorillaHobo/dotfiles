@@ -173,7 +173,7 @@ c.downloads.position = "bottom"
 # c.fileselect.multiple_files.command = ["st", "-e", "lf", "--choosefiles={}"]
 # c.fileselect.single_file.command = ["st", "-e", "lf", "--choosefile={}"]
 
-c.fonts.default_family = ["IBM Plex Sans"]
+c.fonts.default_family = ["Rubik"]
 c.fonts.default_size = "10pt"
 c.fonts.hints = "bold 16px VictorMono Nerd Font"
 

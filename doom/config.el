@@ -1,48 +1,65 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-;;
+
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
-;; clients, file templates and snippets.
+;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Galih Wicaksono"
       user-mail-address "galihwicaksono90@gmail.com")
 
-;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
-;; are the three important ones:
+;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
-;; + `doom-font'
-;; + `doom-variable-pitch-font'
-;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
+;; - `doom-font' -- the primary font to use
+;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
+;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
+;; - `doom-unicode-font' -- for unicode glyphs
+;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
 ;;
-;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
-;; font string. You generally only need these two:
-;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
-;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+;; See 'C-h v doom-font' for documentation and more examples of what they
+;; accept. For example:
+;;
+;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
+;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 (setq doom-font (font-spec :family "VictorMono Nerd Font" :size 12 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "Cascadia Code" :size 12))
-;; (setq doom-font (font-spec :family "Cascadia Code" :size 12 :weight 'semi-light)
-;;       doom-variable-pitch-font (font-spec :family "Cascadia Code" :size 12))
-;; (setq doom-font (font-spec :family "IBM Plex Mono" :size 14)
-;;       doom-variable-pitch-font (font-spec :family "IBM Plex Mono" :size 14))
+      doom-variable-pitch-font (font-spec :family "VictorMono Nerd Font" :size 12))
+;;
+;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
+;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
+;; refresh your font settings. If Emacs still can't find your font, it likely
+;; wasn't installed correctly. Font issues are rarely Doom issues!
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-gruvbox )
-
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Documents/org/")
+;; (setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'doom-gruvbox-material) ; dark variant
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type `relative)
 
+;; If you use `org' and don't want your org files in the default location below,
+;; change `org-directory'. It must be set before org loads!
+(setq org-directory "~/Documents/org/")
 
-;; Here are some additional functions/macros that could help you configure Doom:
+
+;; Whenever you reconfigure a package, make sure to wrap your config in an
+;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
+;;
+;;   (after! PACKAGE
+;;     (setq x y))
+;;
+;; The exceptions to this rule:
+;;
+;;   - Setting file/directory variables (like `org-directory')
+;;   - Setting variables which explicitly tell you to set them before their
+;;     package is loaded (see 'C-h v VARIABLE' to look up their documentation).
+;;   - Setting doom variables (which start with 'doom-' or '+').
+;;
+;; Here are some additional functions/macros that will help you configure Doom.
 ;;
 ;; - `load!' for loading external *.el files relative to this one
 ;; - `use-package!' for configuring packages
@@ -55,50 +72,20 @@
 ;; To get information about any of these functions/macros, move the cursor over
 ;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
 ;; This will open documentation for it, including demos of how they are used.
+;; Alternatively, use `C-h o' to look up a symbol (functions, variables, faces,
+;; etc).
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq +format-with-lsp nil)
-;; (load! "emacs-prisma-mode/prisma-mode")
-
-
-;; (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.svelte\\'" . web-mode))
+;; `gruvbox-material' contrast and palette options
+(setq doom-gruvbox-material-background  "soft"  ; or hard (defaults to soft)
+     doom-gruvbox-material-palette     "mix") ; or original (defaults to material)
 ;;
-;; (use-package! lsp-tailwindcss)
+;; ;; `gruvbox-material-light' contrast and palette options
+;; (setq doom-gruvbox-material-light-background  "medium" ; or hard (defaults to soft)
+;;       doom-gruvbox-material-light-palette     "mix") ; or original (defaults to material)
 ;;
-;; Add latex environments to list of environments.
-(add-hook 'LaTeX-mode-hook 'add-my-latex-environments)
-(defun add-my-latex-environments ()
-  (LaTeX-add-environments
-   '("tikzpicture" LaTeX-env-label)))
-
-(map! :leader
-      :desc "Format buffer using LSP"
-      "c p" #'lsp-format-buffer)
-
-
-(setq lsp-csharp-server-path "/usr/bin/omnisharp")
-(setq lsp-csharp-omnisharp-roslyn-download-url "https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v1.39.0/omnisharp-linux-x64-net6.0.zip")
-
-;; ;; ts-ls json errror fix
-;; (use-package lsp-mode
-;;   :defer t
-;;   :config
-;;   (advice-add 'json-parse-string :around
-;;               (lambda (orig string &rest rest)
-;;                 (apply orig (s-replace "\\u0000" "" string)
-;;                        rest)))
-;;   (advice-add 'json-parse-buffer :around
-;;               (lambda (orig &rest rest)
-;;                 (while (re-search-forward "\\u0000" nil t)
-;;                   (replace-match ""))
-;;                 (apply orig rest))))
-
-(advice-add 'json-parse-buffer :around
-        (lambda (orig &rest rest)
-        (while (re-search-forward "\\u0000" nil t)
-        (replace-match ""))
-        (apply orig rest)))
+;; ;; set `doom-theme'
+;; (setq doom-theme 'doom-gruvbox-material) ; dark variant
+;; (setq doom-theme 'doom-gruvbox-material-light) ; light variant
