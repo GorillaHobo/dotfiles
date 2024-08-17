@@ -1,3 +1,0 @@
-{
-  "cmd": "notify-send -i '{icon}' '{title}' '{text}'"
-}

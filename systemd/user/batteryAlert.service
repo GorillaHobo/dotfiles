@@ -1,9 +1,0 @@
-[Unit]
-Description=Battery alert
-
-[Service]
-Type=simple
-ExecStart=/home/tony/.local/bin/batteryAlert
-
-[Install]
-WantedBy=default.target
