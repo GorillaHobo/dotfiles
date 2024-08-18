@@ -54,3 +54,14 @@ set fish_pager_color_selected_background --background=blue
 set fish_pager_color_selected_prefix black
 set fish_pager_color_selected_completion black
 set fish_pager_color_selected_description black
+
+abbr yz yazi
+abbr v nvim
+
+abbr ta tmux attach -t
+abbr tad tmux attach -t -d
+abbr ts tmux new-session -s
+abbr tl tmux list-session
+abbr tksv tmux kill-server
+abbr tkss tmux kill-session -t
+
