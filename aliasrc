@@ -88,3 +88,10 @@ alias reloadx="xrdb ~/.config/XResources"
 
 # youtube-dl
 alias yt="youtube-dl"
+
+# tmux
+alias ta="tmux attach -t"
+alias tad="tmux attach -d -t"
+alias tk="tmux kill-session -t"
+alias tls="tmux ls"
+alias tn="tmux new -s"

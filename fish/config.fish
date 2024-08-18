@@ -29,14 +29,14 @@ set -g fish_key_bindings fish_vi_key_bindings
 
 # keybindings
 # bind -M insert 'jj' 'set fish_bind_mode default ; commandline -f repaint'
-bind -M insert \cf 'accept-autosuggestion'
-bind -M insert \ck 'up-or-search'
-bind -M insert \cj 'down-or-search'
+bind -M insert \cy 'accept-autosuggestion'
+bind -M insert \cn 'up-or-search'
+bind -M insert \cp 'down-or-search'
 
 # get color from xresources
 # set fish_color_selection --background=(get_x_color 3)
 set fish_color_normal white --bold
-set fish_color_command bryellow --bold
+set fish_color_command yellow --bold
 set fish_color_redirection magenta --bold
 set fish_color_error red --bold
 set fish_color_param normal --bold
@@ -44,18 +44,13 @@ set fish_color_comment white --bold
 set fish_color_quote normal --bold
 set fish_color_search_match cyan --bold
 set fish_color_autosuggestion blue --bold
-set fish_color_cancel brred --bold
+set fish_color_cancel red --bold
 
-set fish_pager_color_progress brcyan --bold
+set fish_pager_color_progress cyan --bold
 set fish_pager_color_prefix yellow --bold
-set fish_pager_color_completion brblue --bold
+set fish_pager_color_completion blue --bold
 set fish_pager_color_description magenta
-set fish_pager_color_selected_background --background=brblue
+set fish_pager_color_selected_background --background=blue
 set fish_pager_color_selected_prefix black
 set fish_pager_color_selected_completion black
 set fish_pager_color_selected_description black
-
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
